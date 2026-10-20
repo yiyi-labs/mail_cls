@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spam-analysis"
+version = "0.1.0"
+description = "Reproducible, group-separated Chinese email classification course project"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "jieba", "pyarrow", "matplotlib", "datasketch", "PyYAML", "joblib", "psutil"]
+
+[project.optional-dependencies]
+dev = ["pytest", "nbformat", "nbclient", "ipykernel", "markdown-it-py"]
+demo = ["streamlit"]
+semantic = ["torch", "transformers", "huggingface-hub", "safetensors", "accelerate"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
