@@ -1,0 +1,88 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#20283f;font:13px/1.6 'Microsoft YaHei',sans-serif;padding:20px;border:1px solid #dfe3ee;border-radius:16px}
+h2{font-size:17px;font-weight:600;margin:0}p{margin:8px 0;color:#758097}.heading,.toolbar,.meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.heading{justify-content:space-between}.badge{color:#6265d9;background:#ededfc;padding:3px 9px;border-radius:20px;font-size:10px;letter-spacing:.04em}
+button,select{font:inherit;border:1px solid #dde1ef;border-radius:7px;background:#fff;color:#48516c;padding:6px 12px;cursor:pointer;max-width:100%}button:disabled{opacity:.35;cursor:default}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #6265d9;outline-offset:2px}
+button.primary{background:#6265d9;color:#fff;border-color:#6265d9;font-weight:500}.toolbar{margin:13px 0}.toolbar input{flex:1;min-width:100px;accent-color:#6265d9}.meta{justify-content:space-between;color:#758097;font-size:11px}.stage{font-size:17px;color:#20283f;font-weight:600}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 245px;gap:16px;margin-top:12px;align-items:start}.viz{background:#f7f8fc;border:1px solid #e2e6f0;border-radius:10px;padding:16px;min-height:330px;overflow:auto}aside{background:#f0f1fb;border-radius:10px;padding:18px}aside strong{display:block;font-size:11px;font-weight:500;color:#758097;margin-bottom:6px}.value{font:500 24px/1.4 ui-monospace,monospace;color:#5357bc;overflow-wrap:anywhere}.legend{font-size:10px;color:#758097;margin-top:12px}.scale{display:inline-block;width:80px;height:6px;background:linear-gradient(90deg,#6265d9,#f4f5fb,#be6f4a);border-radius:5px;margin:0 8px}
+.heat{display:grid;gap:3px;align-items:center;min-width:355px}.token{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;color:#758097;padding-right:5px}.cell{height:17px;padding:0;border:0;border-radius:3px;min-width:0}.dim{text-align:center;font-size:9px;color:#8b93a7}.feature{display:grid;grid-template-columns:110px 1fr 68px;gap:10px;align-items:center;margin:5px 0;font-size:11px}.feature span:first-child{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.track{height:9px;background:#e8ebf6;position:relative;border-radius:3px}.bar{position:absolute;height:100%;border-radius:3px}.feature.pending{opacity:.25}.footer{font-size:10px;color:#758097;margin-top:12px}.math{font-family:ui-monospace,monospace;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}.description{font-size:12px}details{margin-top:18px;border-top:1px solid #dde1ef;padding-top:12px}summary{cursor:pointer;color:#6265a0;font-size:12px}details p{font-size:11px}
+@media(max-width:650px){body{padding:16px}.layout{grid-template-columns:1fr}aside{padding:15px}.viz{min-height:330px}.toolbar{gap:6px}.toolbar button{padding:5px 9px}.toolbar input{min-width:80px}.feature{grid-template-columns:90px 1fr 64px}}
+
+html{scrollbar-gutter:stable}body{animation:appear .4s ease-out;min-height:620px}button,select{transition:background-color .25s,color .25s,border-color .25s,transform .18s}button:hover:not(:disabled){border-color:#9395e5;transform:translateY(-1px)}button:active:not(:disabled){transform:scale(.98)}button.cell:hover{outline:2px solid #6265d9;outline-offset:1px;transform:scale(1.13);z-index:1}
+.cell{transition:background-color .36s ease,transform .15s;animation:appear .35s ease-out}.feature{transition:opacity .35s,color .35s}.bar{transition:width .4s,background-color .4s;transform-origin:left;animation:grow .65s ease-out}.value{font-variant-numeric:tabular-nums}.formula-block{border-top:1px solid #dce0ed;margin-top:16px;padding-top:12px}.formula-block p{font-size:11px;margin-bottom:0}.step-progress{height:4px;background:#e8eaf5;border-radius:4px;overflow:hidden;margin:-4px 0 14px}.step-progress i{height:100%;display:block;width:0;background:linear-gradient(90deg,#6265d9,#a0a2ef);transition:width .35s ease,background .35s ease}.toolbar input{cursor:pointer}.feature.pending .bar{width:0!important}
+.standby{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:20px 6px}.standby div{padding:20px 16px;background:#fff;border:1px solid #e1e5f2;border-radius:10px}.standby b{display:block;color:#6265d9;font-size:11px;margin-bottom:7px}.standby strong{font-size:14px;font-weight:500}.standby p{font-size:11px;margin-bottom:0}
+@keyframes appear{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div class="heading"><h2>计算显微镜</h2><span class="badge">本次实测 · 回放</span></div>
+<p id="description" class="description"></p>
+<label id="branch-control">观察分支 <select id="branch" aria-label="观察分支"></select></label>
+<div class="toolbar"><button id="play" class="primary">播放计算</button><button id="prev" aria-label="上一步">←</button><button id="next" aria-label="下一步">→</button><input id="seek" aria-label="计算步骤" type="range" min="0" value="0"><label><select id="speed" aria-label="播放速度"><option value="900">1×</option><option value="1800">0.5×</option><option value="450">2×</option></select></label></div>
+<div class="step-progress" role="progressbar" aria-label="计算回放进度" aria-valuemin="0" aria-valuemax="100"><i id="progress-fill"></i></div>
+<div class="meta"><span class="stage" id="title"></span><span id="position"></span></div>
+<div class="layout"><div class="viz" id="viz"></div><aside><strong>当前观察值</strong><div class="value" id="value"></div><p id="detail"></p><div class="formula-block"><strong>计算方式</strong><div class="math" id="formula"></div><p id="help"></p></div></aside></div>
+<div class="legend" id="legend"></div><div class="footer">实测激活抽样，非注意力或因果解释。回放速度不代表计算耗时。</div>
+<script type="application/json" id="trace">__TRACE_JSON__</script>
+<script>
+const data=JSON.parse(document.getElementById('trace').textContent),$=id=>document.getElementById(id);
+let branch=data.branches[0],step=0,timer=null,total=1;
+const num=x=>Number(x).toPrecision(7);
+data.branches.forEach((b,i)=>{let opt=document.createElement('option');opt.value=i;opt.textContent=b.name;$('branch').append(opt)});
+$('branch-control').hidden=data.branches.length===1;
+function stop(){clearInterval(timer);timer=null;$('play').textContent='播放计算'}
+function choose(){stop();branch=data.branches[Number($('branch').value)];step=0;$('viz').replaceChildren();
+ total=branch.neural_capture?branch.neural_capture.frames.length:branch.linear_capture?branch.linear_capture.features.length+2:1;
+ $('seek').max=Math.max(0,total-1);
+ $('description').textContent=branch.neural_capture?'逐层查看真实激活，点选色块读取数值。':branch.linear_capture?'特征值 × 权重，逐项累加到实际分数。':'空文本使用训练集类别先验。';
+ render();}
+function render(){
+ $('seek').value=step;$('position').textContent=`${step+1} / ${total}`;$('prev').disabled=step===0;$('next').disabled=step===total-1;const percent=total>1?step/(total-1)*100:100;$('progress-fill').style.width=percent+'%';$('progress-fill').parentElement.setAttribute('aria-valuenow',percent.toFixed(1));
+ if(branch.neural_capture)neural();else if(branch.linear_capture)linear();else{$('viz').textContent='当前邮件没有可提取文本，以训练集类别比例作为基准。';$('title').textContent='训练先验';$('value').textContent=num(branch.score_spam);$('detail').textContent='未运行神经网络或特征分类器。';$('help').textContent='空文本仍保留在评估分母。';$('formula').textContent='p = Train 垃圾邮件比例';$('legend').textContent='';}
+}
+function neural(){
+ const capture=branch.neural_capture,f=capture.frames[step],scale=capture.global_abs_scale;
+ $('title').textContent=f.title;$('value').textContent=num(f.sample_rms);$('detail').textContent=`抽样 RMS · 张量 ${f.shape.join(' × ')} · ${f.elapsed_ms.toFixed(1)} ms（含采集）`;
+ $('help').textContent='行是抽样 token，列是真实维度索引。橙正、紫负，所有帧使用同一色标。FFN 与层输出的维度空间不同。';
+ const operations=branch.id==='E2'?{embedding:'token + 位置 + 句段嵌入 → LayerNorm',attention_output:'Q、K 计算注意力，聚合 V\n输出投影 + 残差 → LayerNorm',feed_forward:'GELU(W₁h + b₁)\n本图为扩展维度中的激活值',layer_output:'W₂ × FFN 激活 + b₂\n加残差 → LayerNorm'}:{embedding:'token ID → 已训练的嵌入表',attention_output:'Q、K 计算注意力，聚合 V\n多头拼接 → 输出投影',feed_forward:'SiLU(gate(h)) × up(h)\n再经 down 投影',layer_output:'注意力残差 + 门控前馈残差',final_norm:'RMSNorm → 最后有效 token 池化\nL2 归一化 → 逻辑回归'};
+ $('formula').textContent=(operations[f.kind]||'')+'\n\n点击色块查看精确数值';
+ if(step===total-1){$('formula').textContent+=`\n\n分类原始 z = ${num(branch.raw_score)}\n校准 logit = ${num(branch.calibrated_logit)}\np = sigmoid(logit)`;if(branch.class_logits)$('formula').textContent+=`\n分类头 logits\n[${branch.class_logits.map(num).join(', ')}]`;}
+ const grid=document.createElement('div');grid.className='heat';grid.style.gridTemplateColumns=`80px repeat(${f.dimensions.length},minmax(12px,1fr))`;
+ grid.append(document.createElement('span'));f.dimensions.forEach(d=>{let s=document.createElement('span');s.className='dim';s.textContent=d;grid.append(s)});
+ f.values.forEach((row,r)=>{let t=document.createElement('span');t.className='token';t.textContent=`${f.token_indices[r]} · ${f.token_labels[r]}`;t.title=t.textContent;grid.append(t);
+ row.forEach((v,c)=>{let cell=document.createElement('button');cell.className='cell';let amount=Math.sqrt(Math.min(1,Math.abs(v)/scale)),base=[244,245,251],target=v>=0?[190,111,74]:[98,101,217];cell.style.background=`rgb(${base.map((x,i)=>Math.round(x+(target[i]-x)*amount)).join(',')})`;
+ const label=`token ${f.token_indices[r]} (${f.token_labels[r]}) · 维度 ${f.dimensions[c]} · ${num(v)}`;cell.title=label;cell.setAttribute('aria-label',label);cell.onclick=()=>{$('value').textContent=num(v);$('detail').textContent=label};grid.append(cell)})});
+ const previous=$('viz').querySelector('.heat');
+ if(previous&&previous.children.length===grid.children.length){
+   Array.from(grid.children).forEach((node,i)=>{const old=previous.children[i];if(node.className==='cell'){old.style.background=node.style.background;old.title=node.title;old.setAttribute('aria-label',node.getAttribute('aria-label'));old.onclick=node.onclick}else{old.textContent=node.textContent;old.title=node.title}});
+ }else{$('viz').replaceChildren(grid)}
+ $('legend').replaceChildren();$('legend').append(document.createTextNode(`−${num(scale)}`));let ramp=document.createElement('span');ramp.className='scale';$('legend').append(ramp,document.createTextNode(`+${num(scale)} · 统一色标 · 平方根亮度映射`));
+}
+function linear(){
+ const c=branch.linear_capture,features=c.features,n=Math.min(step,features.length),scale=Math.max(...features.map(f=>Math.abs(f.product)),1e-12);
+ let sum=c.intercept;features.slice(0,n).forEach(f=>sum+=f.product);if(step===total-1)sum+=c.remaining_contribution;
+ $('title').textContent=step===0?'从截距开始':step===total-1?'加入其余特征 → 完整分数':`第 ${step} 项 · 特征乘以权重`;
+ $('value').textContent=num(sum);$('detail').textContent=`当前累加 z · 截距 ${num(c.intercept)} · 共 ${c.total_active} 项激活特征`;
+ $('help').textContent='橙色推向垃圾，紫色推向正常。按绝对贡献排序，剩余项合并计入。回放是分解顺序，底层使用向量运算。';
+ const f=features[n-1];$('formula').textContent=f?`${f.feature}\nx = ${num(f.x)}\nw = ${num(f.weight)}\nx × w = ${num(f.product)}${f.idf!==undefined?`\n出现 ${f.count} 次 · IDF ${num(f.idf)}`:''}`:'z = intercept + Σ(xⱼ × wⱼ)';
+ if(step===total-1)$('formula').textContent+=`\n其余合计 ${num(c.remaining_contribution)}\n重构 z ${num(c.reconstructed_score)}\n实际 z ${num(branch.raw_score)}\n差值 ${num(c.reconstructed_score-branch.raw_score)}`;
+ const nextRows=[];features.forEach((f,i)=>{let row=document.createElement('div');row.className='feature'+(i>=n?' pending':'');let name=document.createElement('span');name.textContent=f.feature;name.title=f.feature;let track=document.createElement('div');track.className='track';let bar=document.createElement('div');bar.className='bar';bar.style.width=(Math.abs(f.product)/scale*50)+'%';bar.style.left=f.product>=0?'50%':(50-Math.abs(f.product)/scale*50)+'%';bar.style.background=f.product>=0?'#be794f':'#6265d9';track.append(bar);let value=document.createElement('span');value.textContent=f.product.toFixed(5);row.append(name,track,value);nextRows.push(row)});
+ const previousRows=Array.from($('viz').children);
+ if(previousRows.length===nextRows.length&&previousRows.every(row=>row.classList.contains('feature'))){nextRows.forEach((row,i)=>{previousRows[i].className=row.className;previousRows[i].querySelector('.bar').style.cssText=row.querySelector('.bar').style.cssText})}else{$('viz').replaceChildren(...nextRows)};
+ $('legend').textContent=`紫 ← 正常 | 垃圾 → 橙 · 前 ${features.length} 项；其余 ${Math.max(0,c.total_active-features.length)} 项合计 ${num(c.remaining_contribution)}`;
+}
+$('play').onclick=()=>{if(timer){stop();return}if(step===total-1)step=0;render();if(total<2)return;$('play').textContent='暂停';timer=setInterval(()=>{step++;render();if(step===total-1)stop()},Number($('speed').value))};
+$('prev').onclick=()=>{stop();step=Math.max(0,step-1);render()};$('next').onclick=()=>{stop();step=Math.min(total-1,step+1);render()};$('seek').oninput=()=>{stop();step=Number($('seek').value);render()};$('speed').onchange=stop;$('branch').onchange=choose;window.addEventListener('pagehide',stop);
+function standby(){
+ $('branch-control').hidden=true;$('description').textContent='选择邮件并开始分类，即可查看本次实测。';
+ document.querySelectorAll('button,input,select').forEach(control=>control.disabled=true);
+ $('title').textContent='等待本次邮件计算';$('position').textContent='尚未开始';$('value').textContent='—';
+ $('detail').textContent='当前没有计算结果。';$('help').textContent='神经模型显示逐层激活；传统模型显示特征乘积与累加。';$('formula').textContent=`特征 → 模型原始分数
+校准 → 垃圾分数
+与阈值比较 → 分类`;
+ const grid=document.createElement('div');grid.className='standby';
+ [['01','读取文本','主题与正文，保持原始邮件可核对。'],['02','提取特征','分词、编码或 TF-IDF。'],['03','模型计算','记录实际激活或特征贡献。'],['04','校准判断','得到分数，与所选阈值比较。']].forEach(([n,title,description])=>{const card=document.createElement('div');const index=document.createElement('b');index.textContent=n;const head=document.createElement('strong');head.textContent=title;const text=document.createElement('p');text.textContent=description;card.append(index,head,text);grid.append(card)});
+ $('viz').replaceChildren(grid);$('legend').textContent='等待分类 · 计算完成后可逐步回放';
+}
+if(data.branches.length)choose();else standby();
+</script></html>
