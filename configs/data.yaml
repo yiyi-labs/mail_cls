@@ -1,0 +1,4 @@
+zip_path: data/raw/题6_中文垃圾邮件_trec06c.zip
+expected_sha256: 57e7baf0009d516d4360f7dd5879f9a404c5ae87ae223ad1c7f600d902cdd509
+expected_rows: 64620
+processed_path: data/processed/records.parquet
