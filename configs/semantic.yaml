@@ -1,0 +1,16 @@
+qwen_repo: Qwen/Qwen3-Embedding-0.6B
+macbert_repo: hfl/chinese-macbert-base
+max_length: 1024
+embedding_batch_size: 8
+instruction: ''
+embedding_truncation: head
+pooling: last_nonpadding_token_l2
+lr_candidates: [0.1, 1.0, 10.0]
+macbert_max_length: 512
+macbert_subject_max: 64
+macbert_batch_size: 8
+macbert_accumulation: 2
+macbert_epochs: 3
+macbert_learning_rates: [0.00002, 0.00003]
+macbert_truncation: head_tail
+seed: 42
