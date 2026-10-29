@@ -1,0 +1,13 @@
+seed: 42
+data_config: configs/data.yaml
+body_group_min_chars: 80
+shingle_size: 5
+jaccard_threshold: 0.90
+length_ratio: 0.80
+minhash_permutations: 128
+lsh_candidate_threshold: 0.80
+refit_train_tune: false
+word_max_features: 100000
+char_max_features: 200000
+development_examples: [data/000/000, data/000/001]
+bootstrap_repeats: 1000
