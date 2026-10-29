@@ -1,0 +1,172 @@
+<!doctype html><meta charset="utf-8"><title>邮件分类课程报告</title><style>body{max-width:1000px;margin:50px auto;padding:0 30px;font:16px/1.85 "Microsoft YaHei",sans-serif;color:#222a40;background:#f5f6fa}h1,h2{color:#484db2}table{border-collapse:collapse;width:100%;background:white}td,th{padding:10px;border-bottom:1px solid #dfe3ee;text-align:left}a{color:#6265d9}code{overflow-wrap:anywhere}</style><h1>邮件分类与 Python 数据分析</h1>
+<p>本报告对应已发布版本 <code>course-20261016</code>。主模型为 <strong>MacBERT 专项微调</strong>，由开发数据选择。统一留出汇总 19,820 封，准确率 99.405%，正常误拦 60 封，垃圾漏判 58 封。</p>
+<h2>数据与处理</h2>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>正常</th>
+<th>垃圾</th>
+<th>合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enron-Spam</td>
+<td>18003</td>
+<td>25179</td>
+<td>43182</td>
+</tr>
+<tr>
+<td>Apache SpamAssassin</td>
+<td>4108</td>
+<td>1805</td>
+<td>5913</td>
+</tr>
+<tr>
+<td>TREC06C</td>
+<td>21766</td>
+<td>42854</td>
+<td>64620</td>
+</tr>
+</tbody>
+</table>
+<p>共 113,715 封，训练 60,497 封。邮件来自 TREC06C、Apache SpamAssassin 和 AUEB Enron-Spam 的官方发布。统一表保留原始标签、来源、哈希和用途。新增来源排除重复与已知重叠模板，同组不跨集合。文字类型按正文比例统计，不能把来源直接当成逐封语言标签。</p>
+<h2>Python 分析流程</h2>
+<p>Pandas 统一表与分组统计，NumPy 计算分箱、分位数、归一化和混淆计数，scikit-learn 建立 TF-IDF 与分类器。网页与 Notebook 共用分析函数。数据分析连接来源、长度、质量、词语和错误，而不只展示模型榜单。</p>
+<h2>分类比较</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>准确率</th>
+<th>Macro-F1</th>
+<th>正常误拦</th>
+<th>垃圾漏判</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>朴素贝叶斯</td>
+<td>96.720%</td>
+<td>96.610%</td>
+<td>434</td>
+<td>216</td>
+</tr>
+<tr>
+<td>逻辑回归</td>
+<td>98.754%</td>
+<td>98.717%</td>
+<td>124</td>
+<td>123</td>
+</tr>
+<tr>
+<td>多粒度 SVM</td>
+<td>99.324%</td>
+<td>99.304%</td>
+<td>78</td>
+<td>56</td>
+</tr>
+<tr>
+<td>Qwen 语义迁移</td>
+<td>97.250%</td>
+<td>97.168%</td>
+<td>284</td>
+<td>261</td>
+</tr>
+<tr>
+<td>MacBERT 专项微调</td>
+<td>99.405%</td>
+<td>99.387%</td>
+<td>60</td>
+<td>58</td>
+</tr>
+</tbody>
+</table>
+<p>五种方法覆盖词统计、线性分类与语义表示。B1/B2 共用词 TF-IDF；SVM 加入字符和主题；Qwen 冻结 0.6B 编码器，MacBERT 监督微调。参数量、输入长度与训练方式不同，比较的是完整方案，不是等参数模型。</p>
+<h2>泛化与错误分布</h2>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>评价数</th>
+<th>错误率</th>
+<th>正常误拦</th>
+<th>垃圾漏判</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache SpamAssassin</td>
+<td>1225</td>
+<td>2.612%</td>
+<td>18</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Enron-Spam</td>
+<td>8884</td>
+<td>0.878%</td>
+<td>37</td>
+<td>41</td>
+</tr>
+<tr>
+<td>TREC06C</td>
+<td>9711</td>
+<td>0.082%</td>
+<td>5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>固定留出集回顾评估；本轮发布修订前已观察旧模型在这些邮件上的结果。候选、校准和阈值仅使用开发数据。 训练与留出邮件按已识别模板组分开，训练中使用同来源的其他邮件，因此不属于全新来源测试。公开数据主要来自 1999–2006 年，现代中文邮箱效果仍待独立检验。AI 辅助抽样复核没有替代人工全量标注。</p>
+<p>浏览器验收中的合成课程通知“课程项目答疑时间”（正文为本周四项目答疑安排）仍被当前 MacBERT 误判为垃圾，分数约 0.9983。该例未加入训练，也不计入正式成绩；它说明历史语料高分不能保证现代课程邮件的效果，后续需要独立人工核对的现代邮件集，而不能围绕这个例子临时修改阈值。</p>
+<h2>概率与成本</h2>
+<p>主模型 Brier 为 0.005436，10 区间 ECE 为 0.003850。可靠性曲线比较平均预测垃圾概率与实际垃圾占比，高置信度仍可能误判。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>推理中位数</th>
+<th>P95</th>
+<th>GPU 峰值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>朴素贝叶斯</td>
+<td>3.9 ms</td>
+<td>11.6 ms</td>
+<td>CPU</td>
+</tr>
+<tr>
+<td>逻辑回归</td>
+<td>2.5 ms</td>
+<td>7.5 ms</td>
+<td>CPU</td>
+</tr>
+<tr>
+<td>多粒度 SVM</td>
+<td>4.6 ms</td>
+<td>14.4 ms</td>
+<td>CPU</td>
+</tr>
+<tr>
+<td>Qwen 语义迁移</td>
+<td>47.3 ms</td>
+<td>146.1 ms</td>
+<td>1455 MiB</td>
+</tr>
+<tr>
+<td>MacBERT 专项微调</td>
+<td>13.1 ms</td>
+<td>29.0 ms</td>
+<td>599 MiB</td>
+</tr>
+</tbody>
+</table>
+<p>性能测试从相同训练邮件分层抽样，统一 UTF-8 封装，单封端到端解析与推理；预热后重复三次，模型加载另计。硬件、样本与参数量保存在本轮 benchmark.csv。网页采集计算轨迹会带来额外耗时，不能与该基准直接混用。</p>
+<h2>交互与复现</h2>
+<p>邮件实验室支持文字、EML/TXT/CSV、本地批量分类。真实词元、TF-IDF、线性贡献与中间张量可回放；修改片段后以同模型同阈值重算。动画不是额外训练，也不意味着因果解释。</p>
+<p>训练更新参数，Tune 选候选，Calibrate 校准，Policy 定阈值与主模型。Test 只用于回顾评价。原发布规则要求各来源指标同时不降，导致全部新候选被拒绝；该次结果完整保留。本次展示已完成训练的五种方法，按 Policy 总体准确率选择，并报告各来源的得失。没有重新拟合测试邮件，也没有根据测试成绩调整参数或阈值。训练与阶段恢复代码保留在 experiments/ 和 scripts/，本轮已全部完成。</p>
+<p>来源：<a href="https://trec.nist.gov/pubs/trec15/papers/SPAM06.OVERVIEW.pdf">NIST</a>、<a href="https://spamassassin.apache.org/old/publiccorpus/readme.html">Apache</a>、<a href="https://www2.aueb.gr/users/ion/data/enron-spam/readme.txt">AUEB</a>。完整参数、预测、来源哈希及不确定性分析见 <code>artifacts/runs/course-20261016/</code>。</p>
