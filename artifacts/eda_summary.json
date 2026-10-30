@@ -1,0 +1,13 @@
+{
+  "split": "train",
+  "rows": 36158,
+  "font": "Microsoft YaHei",
+  "majority_baseline": 0.6693677747663035,
+  "length_quantiles": {
+    "0.5": 344.0,
+    "0.9": 1848.0,
+    "0.99": 6250.0
+  },
+  "word_cap": 790472,
+  "explanation": "All feature-forming EDA uses Train. Raw-structure audit uses full corpus separately. Keywords report class-normalized document frequency."
+}

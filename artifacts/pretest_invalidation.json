@@ -1,0 +1,10 @@
+{
+  "reason": "RFC2047 encoded/plain boundary whitespace defect discovered by Tune format invariance test",
+  "parser": "1.2.0",
+  "affected_original_rows": 35,
+  "affected_train": 23,
+  "affected_tune": 2,
+  "test_predictions_seen": false,
+  "old_results_archive": "artifacts\\private\\before_parser_1_2_0",
+  "decision": "Repeat all P2 candidates on repaired Train/Tune; retain same predefined hyperparameters and all original labels"
+}

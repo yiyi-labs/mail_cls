@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-15",
+  "reason": "Move the unchanged original dataset into data/raw; no computational configuration changes.",
+  "file": "configs/data.yaml",
+  "before": "041c040d484aa5a4b1114fba1dea39b9c6cd173ad6eb50b3d824e8ea9d6a4c64",
+  "after": "9d6c7af95d18a3dcbf980ec25f49f64df38768f0d9cbc194ad457d7c93e9cf30",
+  "before_text": "zip_path: 题6_中文垃圾邮件_trec06c.zip\nexpected_sha256: 57e7baf0009d516d4360f7dd5879f9a404c5ae87ae223ad1c7f600d902cdd509\nexpected_rows: 64620\nprocessed_path: data/processed/records.parquet\n",
+  "after_text": "zip_path: data/raw/题6_中文垃圾邮件_trec06c.zip\nexpected_sha256: 57e7baf0009d516d4360f7dd5879f9a404c5ae87ae223ad1c7f600d902cdd509\nexpected_rows: 64620\nprocessed_path: data/processed/records.parquet\n",
+  "zip_sha256": "57e7baf0009d516d4360f7dd5879f9a404c5ae87ae223ad1c7f600d902cdd509"
+}

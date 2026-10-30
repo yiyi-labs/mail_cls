@@ -1,0 +1,55 @@
+{
+  "zip_bytes": 118139295,
+  "sha256": "57e7baf0009d516d4360f7dd5879f9a404c5ae87ae223ad1c7f600d902cdd509",
+  "entries": 129684,
+  "macosx": 64842,
+  "rows": 64620,
+  "unique_paths": 64620,
+  "missing": 0,
+  "labels": {
+    "spam": 42854,
+    "ham": 21766
+  },
+  "raw_unique": 64620,
+  "body_unique": 31881,
+  "body_duplicate_groups": 4823,
+  "body_duplicate_rows": 37562,
+  "body_duplicate_extra": 32739,
+  "body_max": 827,
+  "body_mixed": 0,
+  "counts": {
+    "raw_bytes": 138681252,
+    "max_size": 49739,
+    "empty_body": 335,
+    "multipart_broken": 11901,
+    "light_html": 273,
+    "base64": 7551,
+    "base64_nonascii": 7516,
+    "base64_invalid": 7541
+  },
+  "defects": {
+    "StartBoundaryNotFoundDefect": 11864,
+    "MultipartInvariantViolationDefect": 11901,
+    "MissingHeaderBodySeparatorDefect": 815,
+    "NoBoundaryInMultipartDefect": 37,
+    "InvalidMultipartContentTransferEncodingDefect": 8
+  },
+  "types": {
+    "multipart/related": 1550,
+    "text/plain": 39222,
+    "multipart/alternative": 7147,
+    "text/html": 13497,
+    "multipart/mixed": 3194,
+    "multipart/report": 10
+  },
+  "leaky_headers": {
+    "x-proofpoint-spam-details": 127,
+    "x-imss-scores": 141,
+    "x-imss-result": 141,
+    "x-eyou-spamvalue": 60
+  },
+  "delay_rows": 129240,
+  "delay_twice": true,
+  "delay_same": true,
+  "elapsed_s": 23.178342500003055
+}

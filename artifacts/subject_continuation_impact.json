@@ -1,0 +1,13 @@
+{
+  "changed_rows": 603,
+  "by_split": {
+    "train": 339,
+    "test": 80,
+    "policy": 72,
+    "calibrate": 58,
+    "tune": 54
+  },
+  "zip_unchanged": true,
+  "rule": "Only complete, valid Base64 plus terminator and strict declared charset; no inferred bytes or padding",
+  "scope": "Label-blind encoded-header structure; Test predictions have not been opened"
+}

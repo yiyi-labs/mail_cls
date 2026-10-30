@@ -1,0 +1,6 @@
+model,n,load_s,median_e2e_ms,p95_e2e_ms,mean_e2e_ms,local_artifact_bytes,source,scope
+B1,32,0.5090535000199452,4.945149994455278,8.482389996061102,5.998637499942561,3118345,32 fixed-seed Train emails re-encapsulated as UTF-8 MIME,"Single mail: parse, transform, score, calibrate, decision; excludes initial model load; includes no network"
+B2,32,0.5075321000185795,3.8220499991439283,8.488720044260843,4.425728126079775,1904742,32 fixed-seed Train emails re-encapsulated as UTF-8 MIME,"Single mail: parse, transform, score, calibrate, decision; excludes initial model load; includes no network"
+S_char13,32,1.633131799986586,6.955699995160103,11.930955006391738,7.9170624958351254,5721897,32 fixed-seed Train emails re-encapsulated as UTF-8 MIME,"Single mail: parse, transform, score, calibrate, decision; excludes initial model load; includes no network"
+E1,32,2.0076756999478675,52.404000016395,151.92794997128655,65.44381562343915,1207499660,32 fixed-seed Train emails re-encapsulated as UTF-8 MIME,"Single mail: parse, transform, score, calibrate, decision; excludes initial model load; includes no network"
+E2,32,0.6568083000020124,18.305050005437806,26.261450001038607,18.86788437695941,409653575,32 fixed-seed Train emails re-encapsulated as UTF-8 MIME,"Single mail: parse, transform, score, calibrate, decision; excludes initial model load; includes no network"

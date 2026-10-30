@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-13T07:30:14.318678+00:00",
+  "reason": "Reporting only: read the separate saved-family convergence audit; sort the length-bin figure numerically and move an overlapping legend. No training, inference, thresholds, raw predictions or Test rerun.",
+  "files": {
+    "src/spam_analysis/notebooks.py": {
+      "before": "c704bd342d8cb593c6334c45947a11e5f6850e4da207fbed6e5dbf45aa88970a",
+      "after": "b4fb13946f892d1f88e26231aa956ee091472041d35c35fc1e4e9a5acdc62f7d"
+    },
+    "src/spam_analysis/reporting.py": {
+      "before": "afb1174936e9d2856e57650b9cacda8a1749eff3d6a9a02b916d2cb28f39c8bc",
+      "after": "57051580a23a8b5e58478e634b62fdbb92ab1e80ba3d5f5792bd8ca2667d71ef"
+    },
+    "src/spam_analysis/result_plots.py": {
+      "before": "0b99bb0a947eb700a63bfd6fc5aa477a17c393421440abb0eab437b263193b88",
+      "after": "53a70274091068488b550aab685b6b64fa330354bcbef6fe5e69b0dfbfb14961"
+    }
+  },
+  "unchanged_evidence": {
+    "artifacts/evaluation_plan.json": "c1749b52b5b2c5d0a6f9824599c4e8844df5f6f69b96b673bee76eeba3a770e4",
+    "artifacts/test_opened.json": "96ef9cfea69aad6490892e759ca6ea3e13cc2e44c5b33d943e84f1c660e1c712",
+    "artifacts/test_complete.json": "aad60c4dbf37b531d59d14e94ee3c541defcb33e1da73f5472a096e0db4b8643",
+    "artifacts/test_results.csv": "17623e9bab099ec113325fa76d4a5d4fe57ff58fb0e2272f703bff2ace9b4eaa",
+    "artifacts/robustness_test.csv": "70fa9fdd561ea0608610f3ee1379de35db87170b02b8ca9f05a07a10b0e15494",
+    "artifacts/predictions/test_B1.parquet": "e1c9aaaf45de3671e464d095f1182457f4dc8d7930b3bd23d75781657d951443",
+    "artifacts/predictions/test_B2.parquet": "e0ef1651d4bac39ecfaa7dd4c5ec62263cf077586ed0384f699cccae35927103",
+    "artifacts/predictions/test_E1.parquet": "292f25260b361566cd2b498eeb181964050247eb0400b40a621e0b2efb216d94",
+    "artifacts/predictions/test_E2.parquet": "1d4e2042874cbe4f66ae13da853085a995840f61867156d2bd0a3fdb1985b923",
+    "artifacts/predictions/test_error_analysis_all.parquet": "07ebdc4529466d6af2d2f2d09100d80f78e2f85874243da7505a27fc8eea58d0",
+    "artifacts/predictions/test_F_0.0.parquet": "7b7eec4f041c951c3e23a1f57387ea6957ec9b54c9dd90f8a22cfbef7c61b5e7",
+    "artifacts/predictions/test_F_0.25.parquet": "8769616b752754881c4fe24d750a8ea81b418b23cc778a5bc4352fbb26d0aae5",
+    "artifacts/predictions/test_F_0.5.parquet": "c14d04e68537f56797046856f3ec909afd6ba90a1673968f74f0f26f2aee7c24",
+    "artifacts/predictions/test_F_0.75.parquet": "5226e283a3768b7f846f5e13bb0287965373104004b6a46e47ed70f528ede351",
+    "artifacts/predictions/test_F_1.0.parquet": "1d4e2042874cbe4f66ae13da853085a995840f61867156d2bd0a3fdb1985b923",
+    "artifacts/predictions/test_robust_cjk_spaces.parquet": "43a0c0ff8939af2ebb92104cd83049f208d981dd088687b304143797c6744a1b",
+    "artifacts/predictions/test_robust_fullwidth.parquet": "5d5bfbbb641013b73d3eb17caebb81ce11bccafa5c657de936391690ffa11326",
+    "artifacts/predictions/test_robust_html_wrapper.parquet": "6b12b3ea05717c7d667950a61f68c2dad91a4ae379eb799e60e3a7ef3c6430ea",
+    "artifacts/predictions/test_robust_mime_base64.parquet": "6b12b3ea05717c7d667950a61f68c2dad91a4ae379eb799e60e3a7ef3c6430ea",
+    "artifacts/predictions/test_robust_repeat_punctuation.parquet": "ce914a6828d62992ff9cbe6cf1b2d028084d9070101afbad2576a67632e6f0d7",
+    "artifacts/predictions/test_robust_zero_width.parquet": "b4752294f0f55737d18057e6a065359dae092d0e890fda0150fdf53ef0003169",
+    "artifacts/predictions/test_S_char13.parquet": "7b7eec4f041c951c3e23a1f57387ea6957ec9b54c9dd90f8a22cfbef7c61b5e7"
+  }
+}

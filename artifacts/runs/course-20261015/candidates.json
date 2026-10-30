@@ -1,0 +1,364 @@
+{
+  "B1": {
+    "candidate": "B1_mixed_sources",
+    "path": "artifacts\\runs\\course-20261015\\models\\B1.joblib",
+    "metrics": {
+      "tn": 4154.0,
+      "fp": 92.0,
+      "fn": 581.0,
+      "tp": 5941.0,
+      "accuracy": 0.9375,
+      "spam_precision": 0.9847505387037958,
+      "spam_recall": 0.910916896657467,
+      "spam_f1": 0.9463958582238152,
+      "ham_precision": 0.8772967265047519,
+      "ham_recall": 0.9783325482807348,
+      "ham_f1": 0.9250640240507738,
+      "macro_f1": 0.9357299411372946,
+      "balanced_accuracy": 0.9446247224691009,
+      "ham_fpr": 0.02166745171926519,
+      "spam_miss_rate": 0.08908310334253297,
+      "n": 10768,
+      "threshold": 0.0,
+      "average_precision": 0.9943351954514789,
+      "roc_auc": 0.9921791211253104,
+      "brier": null
+    },
+    "kind": "nb",
+    "param": 0.1,
+    "balanced": false,
+    "feature_kwargs": {
+      "baseline": true
+    },
+    "cap_audit": {
+      "word": {
+        "dimensions": 100000,
+        "eligible": 790472,
+        "cap": 100000,
+        "truncated_fraction": 0.8734933052657147,
+        "hit_cap": true
+      }
+    },
+    "fit_split": "train",
+    "calibrated": false,
+    "converged": true,
+    "type": "sparse",
+    "calibrator_path": "artifacts/models/B1_calibrator.joblib",
+    "calibration_split": "calibrate",
+    "model_sha256": "672e695bb62b5e8f94efab9ad217c34a6a9bbf80e4b963acfb49d80efb8ecda4",
+    "calibrator_sha256": "03a7e04d039643b664ffe2cb48b57f4f2a884d60f5a97df67400ca762f842cac",
+    "train_prior": 0.6245929550225631,
+    "fit_s": 130.3419748999986,
+    "train_rows": 60497
+  },
+  "B2": {
+    "candidate": "B2_mixed_sources",
+    "path": "artifacts\\runs\\course-20261015\\models\\B2.joblib",
+    "metrics": {
+      "tn": 4173.0,
+      "fp": 73.0,
+      "fn": 36.0,
+      "tp": 6486.0,
+      "accuracy": 0.9898774145616642,
+      "spam_precision": 0.9888702546119835,
+      "spam_recall": 0.9944802207911684,
+      "spam_f1": 0.991667303722957,
+      "ham_precision": 0.9914468995010691,
+      "ham_recall": 0.9828073480923222,
+      "ham_f1": 0.9871082199881727,
+      "macro_f1": 0.9893877618555649,
+      "balanced_accuracy": 0.9886437844417453,
+      "ham_fpr": 0.017192651907677815,
+      "spam_miss_rate": 0.005519779208831647,
+      "n": 10768,
+      "threshold": 0.0,
+      "average_precision": 0.999513274123741,
+      "roc_auc": 0.9992273334659328,
+      "brier": null
+    },
+    "kind": "lr",
+    "param": 4,
+    "balanced": false,
+    "feature_kwargs": {
+      "baseline": true
+    },
+    "cap_audit": {
+      "word": {
+        "dimensions": 100000,
+        "eligible": 790472,
+        "cap": 100000,
+        "truncated_fraction": 0.8734933052657147,
+        "hit_cap": true
+      }
+    },
+    "fit_split": "train",
+    "calibrated": false,
+    "converged": true,
+    "type": "sparse",
+    "calibrator_path": "artifacts/models/B2_calibrator.joblib",
+    "calibration_split": "calibrate",
+    "model_sha256": "286ebde26af0f1135d42a1f3b7e1bb9fb89979e62204d7f7f01c42c8832df184",
+    "calibrator_sha256": "fde847d9dede91d2fd1304934ab0c354687ef0c5788ea1b76733bc95e1ca6a68",
+    "train_prior": 0.6245929550225631,
+    "fit_s": 61.82583420000083,
+    "train_rows": 60497
+  },
+  "S_char13": {
+    "candidate": "S_char13_mixed_sources",
+    "path": "artifacts\\runs\\course-20261015\\models\\S_char13.joblib",
+    "metrics": {
+      "tn": 4214.0,
+      "fp": 32.0,
+      "fn": 23.0,
+      "tp": 6499.0,
+      "accuracy": 0.9948922734026746,
+      "spam_precision": 0.9951002909202266,
+      "spam_recall": 0.9964734743943575,
+      "spam_f1": 0.9957864092545775,
+      "ham_precision": 0.9945716308708992,
+      "ham_recall": 0.9924634950541686,
+      "ham_f1": 0.9935164446540139,
+      "macro_f1": 0.9946514269542956,
+      "balanced_accuracy": 0.9944684847242631,
+      "ham_fpr": 0.007536504945831371,
+      "spam_miss_rate": 0.003526525605642441,
+      "n": 10768,
+      "threshold": 0.0,
+      "average_precision": 0.9998222474940284,
+      "roc_auc": 0.9997287704660757,
+      "brier": null
+    },
+    "kind": "svm",
+    "param": 1,
+    "balanced": false,
+    "feature_kwargs": {
+      "char": true,
+      "subject": true,
+      "char_range": [
+        1,
+        3
+      ]
+    },
+    "cap_audit": {
+      "word": {
+        "dimensions": 100000,
+        "eligible": 778258,
+        "cap": 100000,
+        "truncated_fraction": 0.8715079061185365,
+        "hit_cap": true
+      },
+      "char": {
+        "dimensions": 200000,
+        "eligible": 1608229,
+        "cap": 200000,
+        "truncated_fraction": 0.8756396010767123,
+        "hit_cap": true
+      },
+      "subject": {
+        "dimensions": 30000,
+        "eligible": 32384,
+        "cap": 30000,
+        "truncated_fraction": 0.0736166007905138,
+        "hit_cap": true
+      }
+    },
+    "fit_split": "train",
+    "calibrated": false,
+    "converged": true,
+    "type": "sparse",
+    "calibrator_path": "artifacts/models/S_char13_calibrator.joblib",
+    "calibration_split": "calibrate",
+    "model_sha256": "340264a366d2da5a328c9e7a8f51cc7169565fd1b47dc48ad703c245b3964064",
+    "calibrator_sha256": "a9a79a595e2778b9c7a36a647cf8b6545ae1badb17c49ee2a3787c07868f18f3",
+    "train_prior": 0.6245929550225631,
+    "fit_s": 339.3121479000001,
+    "train_rows": 60497
+  },
+  "E2": {
+    "path": "artifacts\\runs\\course-20261015\\models\\E2_identity.json",
+    "identity": {
+      "repo": "hfl/chinese-macbert-base",
+      "revision": "a986e004d2a7f2a1c2f5a3edef4e20604a974ed1",
+      "license": "apache-2.0",
+      "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\.cache\\huggingface\\hub\\models--hfl--chinese-macbert-base\\snapshots\\a986e004d2a7f2a1c2f5a3edef4e20604a974ed1",
+      "files": {
+        "added_tokens.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "config.json": "648c8a2b51c12551f94bae19a66c21a59c9bd8aa0ebb99f2a0af7236cdb99daa",
+        "pytorch_model.bin": "db0506d985574b80c33eec1cf13bd4c130585568753175871095ca13dbad9e23",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer.json": "53ff61207898738bbdc000f38abebef01041c8d23b6270c11855fc692d0a3ad6",
+        "tokenizer_config.json": "61785aeaba176fba6d6489f27dccfd2ddee6aee2af0e590451cab7d8b57e0874",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    },
+    "checkpoint": {
+      "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\artifacts\\runs\\course-20261015\\models\\E2_balanced_2e-05_3",
+      "files": {
+        "config.json": "b769e9dc7fe5bb3bae6ede53894a505dda89560d8fce65c79ce1673cb822f91e",
+        "model.safetensors": "50a9ab064f607068df323548f03da52b51bff2edf748c3e53eff93aa5c5a0518",
+        "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+        "tokenizer.json": "7dfbf1966ebf99d471c3796e9b457329d2b2182b817e144f1e904b957745c839",
+        "tokenizer_config.json": "75a743f7397bf8e240ac050a98e85084af163f8d2cc175448e793897e2f67225",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      },
+      "lr": 2e-05,
+      "epoch": 3,
+      "mode": "head_tail",
+      "loss_mode": "balanced"
+    },
+    "config": {
+      "qwen_repo": "Qwen/Qwen3-Embedding-0.6B",
+      "macbert_repo": "hfl/chinese-macbert-base",
+      "max_length": 1024,
+      "embedding_batch_size": 8,
+      "instruction": "",
+      "embedding_truncation": "head",
+      "pooling": "last_nonpadding_token_l2",
+      "lr_candidates": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "macbert_max_length": 512,
+      "macbert_subject_max": 64,
+      "macbert_batch_size": 8,
+      "macbert_accumulation": 2,
+      "macbert_epochs": 3,
+      "macbert_learning_rates": [
+        2e-05,
+        3e-05
+      ],
+      "macbert_truncation": "head_tail",
+      "seed": 42
+    },
+    "metrics": {
+      "tn": 4225.0,
+      "fp": 21.0,
+      "fn": 32.0,
+      "tp": 6490.0,
+      "accuracy": 0.9950780089153046,
+      "spam_precision": 0.9967746889878667,
+      "spam_recall": 0.9950935295921497,
+      "spam_f1": 0.9959333998311978,
+      "ham_precision": 0.9924829692271553,
+      "ham_recall": 0.9950541686292982,
+      "ham_f1": 0.9937669057979537,
+      "macro_f1": 0.9948501528145757,
+      "balanced_accuracy": 0.9950738491107239,
+      "ham_fpr": 0.004945831370701837,
+      "spam_miss_rate": 0.004906470407850353,
+      "n": 10768,
+      "threshold": 0.0,
+      "average_precision": 0.9999256669726152,
+      "roc_auc": 0.9998875504235601,
+      "brier": null
+    },
+    "fit_split": "train",
+    "type": "semantic",
+    "calibrator_path": "artifacts/models/E2_calibrator.joblib",
+    "calibration_split": "calibrate",
+    "model_sha256": "b99ea5b29944bdda85478a89b81c1e9935deb96d54c5257595db9c30bbb573ca",
+    "calibrator_sha256": "1af98a5c00c683b22a9518d8e50dd342ce598f1df819708db8218cccd8d3fbfc",
+    "train_prior": 0.6245929550225631,
+    "train_rows": 60497,
+    "candidate": "E2_balanced_2e-05_3"
+  },
+  "E1": {
+    "path": "artifacts\\runs\\course-20261015\\models\\E1.joblib",
+    "identity": {
+      "repo": "Qwen/Qwen3-Embedding-0.6B",
+      "distribution_repo": "Qwen/Qwen3-Embedding-0.6B",
+      "source": "ModelScope",
+      "revision": "8c352f163c058323ba38d7803eaa610fef2b47f202d198587928982daafba870",
+      "revision_definition": "SHA256 of immutable per-file revision/hash manifest",
+      "license": "apache-2.0",
+      "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\.cache\\modelscope\\Qwen\\Qwen3-Embedding-0.6B\\8c352f163c058323",
+      "upstream_weight_verified": false,
+      "files": {
+        "1_Pooling/config.json": "37bf193fa101f19101bfad9c31d3eb0f786e247b7b1e5cb7f007d730eed1ddbd",
+        "README.md": "c34d9b7e5a267ad3fdd13227a253686bc90844ff4744a2a6a86c7c905e3d06f3",
+        "config.json": "b5bf1f51fc45be473a54718cef92448d90a1be001bf9b9a44b8c7f10a19feaa9",
+        "config_sentence_transformers.json": "10667c72ddb772627bf1780cb7f86af8e2ae0032b8c243c731172064105c6961",
+        "configuration.json": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+        "generation_config.json": "28396d421a2108acce96383f6a7de78008f7f1b17f807958f3c14c51dbfb65fb",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model.safetensors": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "tokenizer.json": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+        "tokenizer_config.json": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "file_revisions": {
+        "1_Pooling/config.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+        "README.md": "dd3e37eb506b3addbd930037796e25d349ae9010",
+        "config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+        "config_sentence_transformers.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+        "configuration.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+        "generation_config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+        "merges.txt": "b5afe39ac0d47717f5104238e7df93635f36adec",
+        "model.safetensors": "5092237580d1545d466a2d454c09f18181c341ec",
+        "modules.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+        "tokenizer.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+        "tokenizer_config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+        "vocab.json": "b5afe39ac0d47717f5104238e7df93635f36adec"
+      }
+    },
+    "config": {
+      "qwen_repo": "Qwen/Qwen3-Embedding-0.6B",
+      "macbert_repo": "hfl/chinese-macbert-base",
+      "max_length": 1024,
+      "embedding_batch_size": 8,
+      "instruction": "",
+      "embedding_truncation": "head",
+      "pooling": "last_nonpadding_token_l2",
+      "lr_candidates": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "macbert_max_length": 512,
+      "macbert_subject_max": 64,
+      "macbert_batch_size": 8,
+      "macbert_accumulation": 2,
+      "macbert_epochs": 3,
+      "macbert_learning_rates": [
+        2e-05,
+        3e-05
+      ],
+      "macbert_truncation": "head_tail",
+      "seed": 42
+    },
+    "C": 10.0,
+    "metrics": {
+      "tn": 4086.0,
+      "fp": 160.0,
+      "fn": 162.0,
+      "tp": 6360.0,
+      "accuracy": 0.9700965824665676,
+      "spam_precision": 0.9754601226993865,
+      "spam_recall": 0.9751609935602575,
+      "spam_f1": 0.9753105351939887,
+      "ham_precision": 0.961864406779661,
+      "ham_recall": 0.9623174752708431,
+      "ham_f1": 0.9620908876854251,
+      "macro_f1": 0.9687007114397068,
+      "balanced_accuracy": 0.9687392344155503,
+      "ham_fpr": 0.037682524729156855,
+      "spam_miss_rate": 0.02483900643974241,
+      "n": 10768,
+      "threshold": 0.0,
+      "average_precision": 0.9971859704362419,
+      "roc_auc": 0.9959066765292962,
+      "brier": null
+    },
+    "fit_split": "train",
+    "type": "semantic",
+    "calibrator_path": "artifacts/models/E1_calibrator.joblib",
+    "calibration_split": "calibrate",
+    "model_sha256": "706b293fd0901a8f4eccd984c7f564e86a152656309e546d16920ed1cb4954b1",
+    "calibrator_sha256": "2e94186df1c14f87b24d8c31bb1e641f2208cabe77ee29038ddc67a3bed64bde",
+    "train_prior": 0.6245929550225631,
+    "train_rows": 60497,
+    "candidate": "E1_mixed_C10.0"
+  }
+}

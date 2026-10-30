@@ -1,0 +1,22 @@
+{
+  "rows": 64620,
+  "failed": 0,
+  "empty_body": 335,
+  "empty_text": 0,
+  "replacement_rows": 10782,
+  "header_leak_rows": 0,
+  "removed_header_lines": 43,
+  "fallback_counts": {
+    "": 35654,
+    "broken_multipart_raw_body": 12281,
+    "replacement_fallback": 10782,
+    "invalid_base64_kept_raw": 7769,
+    "quoted_printable_without_evidence_kept_raw": 1809,
+    "malformed_header_block_recovered": 815,
+    "unindented_encoded_subject_recovered": 603,
+    "quoted_printable_evidence": 32,
+    "transport_header_lines_removed": 9
+  },
+  "elapsed_s": 146.20798919996014,
+  "zip_unchanged": true
+}

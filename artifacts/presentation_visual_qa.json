@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "reviewed_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "reviewer": "Codex visual inspection of all eight full-size Artifact Tool PNG renders",
+  "scope": "Text fit, legibility, chart labels, table counts, slide consistency; not native PowerPoint rendering",
+  "slide_hashes": {
+    "slide-01.png": "a099a2b00370cbfb4c44e8dc55fba7c7882801cf19c1742f79c85216a84f4011",
+    "slide-02.png": "8ab2c7235b2405cb84668994d2f55d5ed06d7edf643b5c2e1250132dd63c516f",
+    "slide-03.png": "0dd7a1d4e6ed679a491b06838e271185ca63ba67016cc7ce4f87b77ff48b277e",
+    "slide-04.png": "32203de71b93c550d7af34b0388228d15193c6db9652a365eaed204a4b4aced7",
+    "slide-05.png": "2a0655a3579343d9a1a1af5126a48a1e31a94564ed25955437ef9e34772dbdd5",
+    "slide-06.png": "3fe69af79ca7d1014f7b29f2953735ebb85afe7b94c20055bea8f8cc5d65cfd8",
+    "slide-07.png": "57a49937ba313a7ac79f72b09d582b76832197b69c7add7696ff9101a9d3b6b5",
+    "slide-08.png": "691704a3d038f703b3caf726a322740df832fcf1254366b291723488eab321c8"
+  },
+  "pptx_sha256": "f98d47da4ed08199553806ab8c1cb6288421e93e64d5352c7786ec46cc42ec0a",
+  "run_id": "course-20261016"
+}

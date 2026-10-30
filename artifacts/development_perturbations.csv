@@ -1,0 +1,7 @@
+rule,n,applied,subject_equal,body_equal,changed_ham,changed_spam
+fullwidth,256,256,256,256,0,0
+zero_width,256,256,256,256,0,0
+html_wrapper,256,256,256,256,0,0
+mime_base64,256,256,256,256,0,0
+cjk_spaces,256,253,68,19,104,133
+repeat_punctuation,256,184,174,91,64,101

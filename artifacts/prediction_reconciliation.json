@@ -1,0 +1,8 @@
+{
+  "models": 10,
+  "operating_points": 40,
+  "weighted_result_rows": 80,
+  "rows": 9711,
+  "passed": true,
+  "method": "Recompute per-mail and per-group metrics from doc_id-aligned saved predictions; no model inference or threshold fitting"
+}

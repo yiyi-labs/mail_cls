@@ -1,0 +1,19 @@
+{
+  "device": "cuda",
+  "rows": 128,
+  "elapsed_s": 6.745522900018841,
+  "rows_per_second": 18.97554895257156,
+  "load_s": 2.1736852999893017,
+  "padding_cosine": 0.999849796295166,
+  "padding_max_abs_delta": 0.00214570015668869,
+  "embedding_dim": 1024,
+  "peak_allocated_mib": 2273.15673828125,
+  "train_tokens_quantiles": {
+    "0.5": 235.0,
+    "0.9": 1192.2999999999993,
+    "0.95": 1884.1500000000015,
+    "0.99": 3910.9100000000108
+  },
+  "train_truncated_fraction": 0.12254549477294098,
+  "context_decision": "1024 head default retained; long-text truncation reported, not hidden"
+}

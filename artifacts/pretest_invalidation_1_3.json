@@ -1,0 +1,10 @@
+{
+  "reason": "Strictly recoverable RFC2047 Base64 Subject was wrapped without required indentation; old parser lost continuation",
+  "changed_original_subjects": 603,
+  "train": 339,
+  "tune": 54,
+  "parser": "1.3.0",
+  "test_predictions_seen": false,
+  "semantic_action": "Stopped Qwen cache run before E1 classifier or E2 training; old cache signature cannot match new parser",
+  "decision": "Archive previous P1/P2 results; repeat complete predetermined sparse comparisons, not only improved candidates"
+}

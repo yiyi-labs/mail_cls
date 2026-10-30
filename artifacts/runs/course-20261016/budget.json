@@ -1,0 +1,150 @@
+{
+  "limit_seconds": 28800,
+  "jobs": [
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=1",
+      "seconds": 997.7659999999996,
+      "status": "complete"
+    },
+    {
+      "name": "Superseded data revision; unfinished epoch",
+      "seconds": 344.0248107910156,
+      "status": "interrupted_for_data_expansion"
+    },
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=1",
+      "seconds": 214.875,
+      "status": "recovered_after_shutdown; conservative 90s allowance"
+    },
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=1",
+      "seconds": 988.0790000000015,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=2",
+      "seconds": 902.5780000000013,
+      "status": "recovered_after_shutdown; conservative 90s allowance"
+    },
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=2",
+      "seconds": 297.2340000000004,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT ordinary lr=2e-05 epoch=3",
+      "seconds": 1116.6879999999983,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT ordinary lr=3e-05 epoch=1",
+      "seconds": 1121.4070000000029,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT ordinary lr=3e-05 epoch=2",
+      "seconds": 526.9850000000006,
+      "status": "recovered_after_shutdown; conservative 90s allowance"
+    },
+    {
+      "name": "MacBERT ordinary lr=3e-05 epoch=2",
+      "seconds": 646.4530000000002,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT ordinary lr=3e-05 epoch=3",
+      "seconds": 1085.8129999999999,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=2e-05 epoch=1",
+      "seconds": 1116.219,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=2e-05 epoch=2",
+      "seconds": 1089.6560000000004,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=2e-05 epoch=3",
+      "seconds": 1064.2340000000004,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=3e-05 epoch=1",
+      "seconds": 1022.3599999999997,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=3e-05 epoch=2",
+      "seconds": 1004.781,
+      "status": "complete"
+    },
+    {
+      "name": "MacBERT balanced lr=3e-05 epoch=3",
+      "seconds": 1010.5,
+      "status": "complete"
+    },
+    {
+      "name": "Qwen supplemental encoding and classifier",
+      "seconds": 1093.280999999999,
+      "status": "complete"
+    },
+    {
+      "name": "Calibration and policy B1",
+      "seconds": 39.42200000000048,
+      "status": "complete"
+    },
+    {
+      "name": "Calibration and policy B2",
+      "seconds": 8.781999999999243,
+      "status": "complete"
+    },
+    {
+      "name": "Calibration and policy S_char13",
+      "seconds": 68.21899999999914,
+      "status": "complete"
+    },
+    {
+      "name": "Calibration and policy E2",
+      "seconds": 149.71899999999914,
+      "status": "complete"
+    },
+    {
+      "name": "Calibration and policy E1",
+      "seconds": 0.8130000000001019,
+      "status": "complete"
+    },
+    {
+      "name": "Frozen evaluation and token retention",
+      "seconds": 1173.1100000000006,
+      "status": "complete"
+    },
+    {
+      "name": "Same-machine inference benchmark",
+      "seconds": 71.5619999999999,
+      "status": "complete"
+    },
+    {
+      "name": "Audit candidate rejection on development data only",
+      "seconds": 240.875,
+      "status": "audit_complete"
+    },
+    {
+      "name": "Current-candidate calibration and Policy release",
+      "seconds": 235.79600000000028,
+      "status": "complete"
+    },
+    {
+      "name": "Frozen evaluation and token retention",
+      "seconds": 1237.030999999999,
+      "status": "complete"
+    },
+    {
+      "name": "Same-machine inference benchmark",
+      "seconds": 62.10900000000038,
+      "status": "complete"
+    }
+  ]
+}

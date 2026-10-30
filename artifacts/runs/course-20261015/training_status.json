@@ -1,0 +1,10 @@
+{
+  "sequence": 225,
+  "loss_mode": "balanced",
+  "lr": 3e-05,
+  "epoch": 3,
+  "phase": "validated",
+  "processed": 60497,
+  "total": 60497,
+  "saved_at": "2026-10-16T00:50:56"
+}

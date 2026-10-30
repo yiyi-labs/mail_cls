@@ -1,0 +1,9 @@
+{
+  "n": 5000,
+  "thresholds": 996,
+  "vector_s": 0.0016207000007852912,
+  "loop_s": 0.037692900048568845,
+  "measured_ratio": 23.257172845255255,
+  "correct": true,
+  "interpretation": "One local run; ratio is not a hardware-independent speed guarantee"
+}

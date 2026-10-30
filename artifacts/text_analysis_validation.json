@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-14T03:03:49.782213+00:00",
+  "passed": true,
+  "inference": [
+    {
+      "branch": "E2",
+      "actual_input_ids_match": true,
+      "tokens": 24,
+      "algorithm": "WordPiece",
+      "inference_unchanged": true
+    },
+    {
+      "branch": "E1",
+      "actual_input_ids_match": true,
+      "tokens": 15,
+      "algorithm": "BPE",
+      "inference_unchanged": true
+    },
+    {
+      "branch": "S_char13",
+      "feature_blocks": 3,
+      "inference_unchanged": true
+    }
+  ],
+  "training_statistics": [
+    {
+      "field": "body_chars",
+      "rows_accounted": 36158,
+      "class_rates_sum_to_one": true
+    },
+    {
+      "field": "digit_ratio",
+      "rows_accounted": 36158,
+      "class_rates_sum_to_one": true
+    },
+    {
+      "field": "url_count",
+      "rows_accounted": 36158,
+      "class_rates_sum_to_one": true
+    },
+    {
+      "field": "chinese_ratio",
+      "rows_accounted": 36158,
+      "class_rates_sum_to_one": true
+    }
+  ],
+  "frozen_evidence_unchanged": true,
+  "targeted_tests_passed": 33,
+  "existing_ui_checks_passed": 17,
+  "analysis_feature_views_rendered": 4,
+  "browser_checks": [
+    "token source highlighting",
+    "token playback advances and stops",
+    "character n-gram branch switch",
+    "TF-IDF formula from actual saved values",
+    "neural input verified badge",
+    "desktop and narrow layout without outer token-frame overflow"
+  ],
+  "screenshot": "artifacts/figures/text_analysis_preview.png",
+  "source_hashes": {
+    "app\\text_analysis.py": "84fe4e3cf01466112c157c93646049c64bfdf68fa46690e7724bdd3dd34ce512",
+    "app\\text_view.py": "a44f03fe8c1ae63b5b653aae5320af6c8e431570109674137dd196356c0e4798",
+    "app\\text_lens.html": "1e40151a56cd0768fb1183beb46a04a8a1cee400827a2ed4962da340ff29d978",
+    "app\\data_analysis.py": "b2d0c2d51bd620a7b0bf41ffbd8ee3f44d74504317cabacc4e120cd375f08362",
+    "app\\neural_capture.py": "048900c971a997868c4c577d06284faa3d59cfde64b1bbb174428bfa71eff7cb"
+  }
+}

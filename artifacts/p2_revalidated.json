@@ -1,0 +1,7 @@
+{
+  "parser": "1.3.0",
+  "same_groups_and_splits": true,
+  "exact_content_keys_updated": true,
+  "full_sparse_grid_repeated": true,
+  "raw_zip_unchanged": true
+}

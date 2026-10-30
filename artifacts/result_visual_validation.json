@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "reviewer": "Codex full-image inspection",
+  "figures": {
+    "07_model_comparison.png": "9ebb12022c65b59289303396df9476290bb5520275be248d717245993fcdba62",
+    "08_confusion.png": "0219845f5caefb0b60f2385ec1a09b5db300a79f3508989dbcb6d1e79ead37e6",
+    "09_pr_calibration.png": "6de9b10f95386ace418d7ee62d66527cca558ed650ce5c8846150829575e5b27",
+    "10_policy_threshold.png": "cf70232fb666529cf39ee80d2bddeef06bd203e70219f1659ce6a83eb08323fc",
+    "11_robustness.png": "2d5c86c01c522cb2126d88f3f4eb27766d2637c91d052c3e77154a78756e8476",
+    "12_development_ablation.png": "34d1259a73113a57425aae43954e6123163f07b84d44e1bea8a3cc166054e9c3",
+    "13_error_lengths.png": "b89d807ce5035e33e2640f9a9499f2d792d5d736078cbae99356ef39a87d2bb1",
+    "14_macbert_learning_curves.png": "7a871de76382f12eff1ee6102215c1de9fa5b5f5616be97bfe05521a4167b315"
+  },
+  "checks": [
+    "Full denominator and model/split labels visible",
+    "Confusion matrix directions/counts verified",
+    "Numeric ordering of length bins",
+    "Robustness legend outside bars",
+    "Learning curves retain negative epochs"
+  ]
+}

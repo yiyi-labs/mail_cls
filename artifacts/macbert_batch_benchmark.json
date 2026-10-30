@@ -1,0 +1,75 @@
+{
+  "cases": [
+    {
+      "micro_batch": 8,
+      "accumulation": 2,
+      "effective_batch": 16,
+      "fused": null,
+      "measured_updates": 5,
+      "median_update_s": 0.2328255000174977,
+      "mean_update_s": 0.2327014800044708,
+      "peak_allocated_mib": 3400.111328125,
+      "passed": true,
+      "first_micro_loss": 0.423583984375,
+      "last_micro_loss": 0.02838134765625,
+      "max_weight_delta_vs_default_after_8_updates": 0.0
+    },
+    {
+      "micro_batch": 8,
+      "accumulation": 2,
+      "effective_batch": 16,
+      "fused": false,
+      "measured_updates": 5,
+      "median_update_s": 0.23200109996832907,
+      "mean_update_s": 0.2323305399972014,
+      "peak_allocated_mib": 3393.611328125,
+      "passed": true,
+      "first_micro_loss": 0.423583984375,
+      "last_micro_loss": 0.028533935546875,
+      "max_weight_delta_vs_default_after_8_updates": 0.00021603330969810486
+    },
+    {
+      "micro_batch": 8,
+      "accumulation": 2,
+      "effective_batch": 16,
+      "fused": true,
+      "measured_updates": 5,
+      "median_update_s": 0.21894469996914268,
+      "mean_update_s": 0.22046559997834264,
+      "peak_allocated_mib": 3392.95947265625,
+      "passed": true,
+      "first_micro_loss": 0.423583984375,
+      "last_micro_loss": 0.0283966064453125,
+      "max_weight_delta_vs_default_after_8_updates": 0.0002165054902434349
+    },
+    {
+      "micro_batch": 16,
+      "accumulation": 1,
+      "effective_batch": 16,
+      "fused": false,
+      "measured_updates": 5,
+      "median_update_s": 0.23114330001408234,
+      "mean_update_s": 0.23105825999518856,
+      "peak_allocated_mib": 4557.85107421875,
+      "passed": true,
+      "first_micro_loss": 0.8602294921875,
+      "last_micro_loss": 0.169189453125
+    },
+    {
+      "micro_batch": 16,
+      "accumulation": 1,
+      "effective_batch": 16,
+      "fused": true,
+      "measured_updates": 5,
+      "median_update_s": 0.220628899987787,
+      "mean_update_s": 0.2213738799910061,
+      "peak_allocated_mib": 4562.94921875,
+      "passed": true,
+      "first_micro_loss": 0.8602294921875,
+      "last_micro_loss": 0.169891357421875
+    }
+  ],
+  "rows": 16,
+  "max_tokens": 512,
+  "scope": "Fixed longest Train mails, 3 warm-up and 5 measured optimizer updates; no Tune/Calibrate/Policy/Test data, all temporary weights discarded"
+}

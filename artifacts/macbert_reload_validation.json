@@ -1,0 +1,8 @@
+{
+  "rows": 5933,
+  "passed": true,
+  "max_abs_delta": 0.0,
+  "prediction_flips": 0,
+  "rtol": 0.0001,
+  "atol": 0.001
+}

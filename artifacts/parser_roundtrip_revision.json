@@ -1,0 +1,10 @@
+{
+  "old_version": [
+    "1.1.0"
+  ],
+  "new_version": "1.1.1",
+  "original_text_changes": 0,
+  "rows": 64620,
+  "model_retraining_required": false,
+  "reason": "Declared strict UTF-8/Base64 preserves preexisting U+FFFD/PUA. Full original-corpus impact scan found zero text changes."
+}

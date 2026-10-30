@@ -1,0 +1,7 @@
+{
+  "sparse": "S_char13",
+  "semantic": "E2",
+  "threshold": 0.5,
+  "selection": "Up to three per outcome and class, doc_id sorted then seed42 sample; no cherry-picked successful cases",
+  "status": "Candidate selection only; no invented manual interpretation"
+}

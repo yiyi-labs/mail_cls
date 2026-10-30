@@ -1,0 +1,12 @@
+{
+  "smoke_rows": 8,
+  "smoke_steps": 40,
+  "smoke_first_loss": 0.75,
+  "smoke_final_loss": 0.00011360645294189453,
+  "smoke_training_accuracy": 1.0,
+  "smoke_s": 21.194990100048017,
+  "tokenization_s": 32.031028800003696,
+  "estimated_epoch_s_from_smoke": 2395.033881305426,
+  "peak_allocated_mib": 3060.9765625,
+  "note": "Tiny training-set overfit smoke test is not a generalization result; estimate excludes validation and I/O"
+}

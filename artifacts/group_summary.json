@@ -1,0 +1,138 @@
+{
+  "rows": 64620,
+  "groups": 25462,
+  "exact_content_groups": 34328,
+  "largest": 839,
+  "mixed_label_groups": 0,
+  "rows_in_mixed_groups": 0,
+  "long_unique_views": 30130,
+  "candidate_pairs": 61200,
+  "verified_edges": 23421,
+  "secondary_new_edges": 578,
+  "empty_text_rows": 0,
+  "short_body_rows": 3776,
+  "largest_component_audit": [
+    {
+      "group": "g002428",
+      "mail_count": 839,
+      "distinct_views": 2,
+      "sample_min_pair_jaccard": 0.9606557377049181
+    },
+    {
+      "group": "g000457",
+      "mail_count": 477,
+      "distinct_views": 1,
+      "sample_min_pair_jaccard": null
+    },
+    {
+      "group": "g003721",
+      "mail_count": 404,
+      "distinct_views": 8,
+      "sample_min_pair_jaccard": 0.8501170960187353
+    },
+    {
+      "group": "g000323",
+      "mail_count": 382,
+      "distinct_views": 4,
+      "sample_min_pair_jaccard": 0.8785714285714286
+    },
+    {
+      "group": "g000040",
+      "mail_count": 354,
+      "distinct_views": 13,
+      "sample_min_pair_jaccard": 0.8374233128834356
+    },
+    {
+      "group": "g000015",
+      "mail_count": 351,
+      "distinct_views": 17,
+      "sample_min_pair_jaccard": 0.7713414634146342
+    },
+    {
+      "group": "g030967",
+      "mail_count": 339,
+      "distinct_views": 6,
+      "sample_min_pair_jaccard": 0.8468085106382979
+    },
+    {
+      "group": "g000743",
+      "mail_count": 295,
+      "distinct_views": 11,
+      "sample_min_pair_jaccard": 0.8086124401913876
+    },
+    {
+      "group": "g043109",
+      "mail_count": 269,
+      "distinct_views": 6,
+      "sample_min_pair_jaccard": 0.8682170542635659
+    },
+    {
+      "group": "g000047",
+      "mail_count": 244,
+      "distinct_views": 3,
+      "sample_min_pair_jaccard": 0.9297124600638977
+    },
+    {
+      "group": "g003267",
+      "mail_count": 234,
+      "distinct_views": 2,
+      "sample_min_pair_jaccard": 0.926829268292683
+    },
+    {
+      "group": "g010899",
+      "mail_count": 228,
+      "distinct_views": 1,
+      "sample_min_pair_jaccard": null
+    },
+    {
+      "group": "g000910",
+      "mail_count": 214,
+      "distinct_views": 2,
+      "sample_min_pair_jaccard": 0.9698492462311558
+    },
+    {
+      "group": "g000005",
+      "mail_count": 211,
+      "distinct_views": 1,
+      "sample_min_pair_jaccard": null
+    },
+    {
+      "group": "g000075",
+      "mail_count": 209,
+      "distinct_views": 2,
+      "sample_min_pair_jaccard": 0.9107142857142857
+    },
+    {
+      "group": "g035526",
+      "mail_count": 204,
+      "distinct_views": 0,
+      "sample_min_pair_jaccard": null
+    },
+    {
+      "group": "g000021",
+      "mail_count": 203,
+      "distinct_views": 3,
+      "sample_min_pair_jaccard": 0.9183006535947712
+    },
+    {
+      "group": "g000030",
+      "mail_count": 200,
+      "distinct_views": 2,
+      "sample_min_pair_jaccard": 0.9301675977653632
+    },
+    {
+      "group": "g021376",
+      "mail_count": 197,
+      "distinct_views": 4,
+      "sample_min_pair_jaccard": 0.9090909090909091
+    },
+    {
+      "group": "g000787",
+      "mail_count": 191,
+      "distinct_views": 1,
+      "sample_min_pair_jaccard": null
+    }
+  ],
+  "elapsed_s": 67.04783930000849,
+  "limitation": "LSH can miss pairs; transitive components need not have all-pair Jaccard >= threshold; no label-based splitting"
+}

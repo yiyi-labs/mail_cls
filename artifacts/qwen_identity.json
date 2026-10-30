@@ -1,0 +1,38 @@
+{
+  "repo": "Qwen/Qwen3-Embedding-0.6B",
+  "distribution_repo": "Qwen/Qwen3-Embedding-0.6B",
+  "source": "ModelScope",
+  "revision": "8c352f163c058323ba38d7803eaa610fef2b47f202d198587928982daafba870",
+  "revision_definition": "SHA256 of immutable per-file revision/hash manifest",
+  "license": "apache-2.0",
+  "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\.cache\\modelscope\\Qwen\\Qwen3-Embedding-0.6B\\8c352f163c058323",
+  "upstream_weight_verified": false,
+  "files": {
+    "1_Pooling/config.json": "37bf193fa101f19101bfad9c31d3eb0f786e247b7b1e5cb7f007d730eed1ddbd",
+    "README.md": "c34d9b7e5a267ad3fdd13227a253686bc90844ff4744a2a6a86c7c905e3d06f3",
+    "config.json": "b5bf1f51fc45be473a54718cef92448d90a1be001bf9b9a44b8c7f10a19feaa9",
+    "config_sentence_transformers.json": "10667c72ddb772627bf1780cb7f86af8e2ae0032b8c243c731172064105c6961",
+    "configuration.json": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+    "generation_config.json": "28396d421a2108acce96383f6a7de78008f7f1b17f807958f3c14c51dbfb65fb",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model.safetensors": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd",
+    "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+    "tokenizer.json": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a",
+    "tokenizer_config.json": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "file_revisions": {
+    "1_Pooling/config.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+    "README.md": "dd3e37eb506b3addbd930037796e25d349ae9010",
+    "config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+    "config_sentence_transformers.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+    "configuration.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+    "generation_config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+    "merges.txt": "b5afe39ac0d47717f5104238e7df93635f36adec",
+    "model.safetensors": "5092237580d1545d466a2d454c09f18181c341ec",
+    "modules.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+    "tokenizer.json": "c75dc100bea0a07420353465595ecfef791e7e83",
+    "tokenizer_config.json": "b5afe39ac0d47717f5104238e7df93635f36adec",
+    "vocab.json": "b5afe39ac0d47717f5104238e7df93635f36adec"
+  }
+}

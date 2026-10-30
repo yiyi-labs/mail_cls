@@ -1,0 +1,41 @@
+{
+  "candidate": "S_structure_primal",
+  "converged": true,
+  "iterations": 30,
+  "max_iter": 5000,
+  "fit_s": 14.48946180002531,
+  "unchanged": [
+    "fitted Train transforms",
+    "C",
+    "penalty",
+    "loss",
+    "tolerance",
+    "class weights",
+    "Train/Tune rows"
+  ],
+  "changed": {
+    "dual": false
+  },
+  "metrics": {
+    "tn": 2100.0,
+    "fp": 0.0,
+    "fn": 3.0,
+    "tp": 3830.0,
+    "accuracy": 0.9994943536153716,
+    "spam_precision": 1.0,
+    "spam_recall": 0.9992173232454996,
+    "spam_f1": 0.999608508417069,
+    "ham_precision": 0.9985734664764622,
+    "ham_recall": 1.0,
+    "ham_f1": 0.9992862241256245,
+    "macro_f1": 0.9994473662713468,
+    "balanced_accuracy": 0.9996086616227498,
+    "ham_fpr": 0.0,
+    "spam_miss_rate": 0.0007826767545003914,
+    "n": 5933,
+    "threshold": 0.0,
+    "average_precision": 0.9999991844993441,
+    "roc_auc": 0.9999985091871342,
+    "brier": null
+  }
+}

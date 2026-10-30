@@ -1,0 +1,123 @@
+{
+  "main": "E2",
+  "best_sparse": "S_char13",
+  "best_semantic": "E2",
+  "specifications": {
+    "B1": {
+      "weights": {
+        "B1": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.4944458199221564,
+        "fpr_0.005": 0.9160573301445293,
+        "fpr_0.01": 0.8993375510394108
+      }
+    },
+    "B2": {
+      "weights": {
+        "B2": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.8161531266282536,
+        "fpr_0.005": 0.6070973547666749,
+        "fpr_0.01": 0.6070973547666749
+      }
+    },
+    "S_char13": {
+      "weights": {
+        "S_char13": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.08215687597473362,
+        "fpr_0.005": 0.08215687597473362,
+        "fpr_0.01": 0.03711192423246803
+      }
+    },
+    "E1": {
+      "weights": {
+        "E1": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.7687048317946086,
+        "fpr_0.005": 0.9742108828784802,
+        "fpr_0.01": 0.910979519132628
+      }
+    },
+    "E2": {
+      "weights": {
+        "E2": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.9994168334001157,
+        "fpr_0.005": 0.9994168334001157,
+        "fpr_0.01": 0.9994168334001157
+      }
+    },
+    "F_0.0": {
+      "weights": {
+        "S_char13": 1.0,
+        "E2": 0.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.08215687597473362,
+        "fpr_0.005": 0.08215687597473362,
+        "fpr_0.01": 0.03711192423246803
+      }
+    },
+    "F_0.25": {
+      "weights": {
+        "S_char13": 0.75,
+        "E2": 0.25
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.277833943174351,
+        "fpr_0.005": 0.277833943174351,
+        "fpr_0.01": 0.277833943174351
+      }
+    },
+    "F_0.5": {
+      "weights": {
+        "S_char13": 0.5,
+        "E2": 0.5
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.518555962116234,
+        "fpr_0.005": 0.518555962116234,
+        "fpr_0.01": 0.518555962116234
+      }
+    },
+    "F_0.75": {
+      "weights": {
+        "S_char13": 0.25,
+        "E2": 0.75
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.7592779810581171,
+        "fpr_0.005": 0.7592779810581171,
+        "fpr_0.01": 0.7592779810581171
+      }
+    },
+    "F_1.0": {
+      "weights": {
+        "S_char13": 0.0,
+        "E2": 1.0
+      },
+      "thresholds": {
+        "default": 0.5,
+        "research": 0.9994168334001157,
+        "fpr_0.005": 0.9994168334001157,
+        "fpr_0.01": 0.9994168334001157
+      }
+    }
+  },
+  "rationale": "First require gain >=0.0005 over sparse and no ham_FPR increase, then rank by Macro-F1 / lower FPR / simpler model; retain sparse if none qualify; alpha endpoints included; Policy only"
+}

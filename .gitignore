@@ -23,8 +23,11 @@ artifacts/runs/*/pipeline.lock
 artifacts/runs/*/pipeline.log
 artifacts/logs/
 artifacts/*.parquet
+artifacts/tables/corpus_terms.parquet
+artifacts/runs/*/benchmark_samples.csv
 reports/private/
 *.eml
 .ipynb_checkpoints/
 reproductions/
 .streamlit/secrets.toml
+~$*

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "scope": "Fresh directory creation and copied source/ZIP identity only; not a second full training run",
+  "no_old_predictions": true,
+  "no_git_copied": true
+}

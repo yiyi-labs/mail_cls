@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "branch": "E2",
+      "frames": 37,
+      "matches_original": true,
+      "input_changes_activations": true,
+      "hooks_removed": true
+    },
+    {
+      "branch": "E1",
+      "frames": 86,
+      "matches_original": true,
+      "input_changes_activations": true,
+      "hooks_removed": true
+    }
+  ],
+  "train_samples": [
+    {
+      "split": "train",
+      "label": 0,
+      "model": "E2",
+      "raw_score": -12.875,
+      "calibrated_logit": -6.583841277862321,
+      "score": 0.0013806196602138452,
+      "stable_ham_tail": 0.9986193803397861,
+      "prediction": 0
+    },
+    {
+      "split": "train",
+      "label": 1,
+      "model": "E2",
+      "raw_score": 13.0,
+      "calibrated_logit": 7.314453157547711,
+      "score": 0.9993345977289309,
+      "stable_ham_tail": 0.0006654022710691526,
+      "prediction": 1
+    }
+  ],
+  "run_id": "course-20261016",
+  "plan_sha256": "bfc28ef70ba38350d1ff884f81e7a28964bac040f056a3f7238ea662b6c1d44f",
+  "scope": "Two synthetic inputs and first Train mail of each class, read-only inference; no refitting or Test score generation."
+}

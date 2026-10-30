@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "utc": "2026-10-26T14:53:57.989694+00:00",
+  "unit_tests_passed": 103,
+  "frozen_computational_source_and_assets_unchanged": true,
+  "reporting_only_amendment": true,
+  "data_location_amendment": true,
+  "notebooks": [
+    "notebooks\\01_parse_and_quality.ipynb",
+    "notebooks\\02_eda_and_features.ipynb",
+    "notebooks\\03_baselines_and_semantics.ipynb",
+    "notebooks\\04_evaluation_and_policy.ipynb"
+  ],
+  "semantic_status": {
+    "E1": "complete",
+    "E2": "complete"
+  },
+  "published_run": {
+    "run_id": "course-20261016",
+    "test_rows": 19820,
+    "main": "E2",
+    "results_reconciled": true
+  },
+  "slides": 8,
+  "native_charts": 4,
+  "app_checks": {
+    "passed": true,
+    "checks": [
+      "Real sparse inference and contributions",
+      "Local edit, same-model recomputation and restore",
+      "Same-message comparison",
+      "Input invalidation and empty-input prior",
+      "Unified catalog, independent split filter and empty search",
+      "Version-matched model comparison and unified data analysis",
+      "Source, script, length and quality slices",
+      "Both neural model inference traces",
+      "Read-only data and evidence identities"
+    ],
+    "plan_sha256": "bfc28ef70ba38350d1ff884f81e7a28964bac040f056a3f7238ea662b6c1d44f",
+    "run_id": "course-20261016"
+  },
+  "prediction_reconciliation": {
+    "models": 10,
+    "operating_points": 40,
+    "weighted_result_rows": 80,
+    "rows": 9711,
+    "passed": true,
+    "method": "Recompute per-mail and per-group metrics from doc_id-aligned saved predictions; no model inference or threshold fitting"
+  },
+  "school_report": {
+    "path": "reports/项目报告.docx",
+    "sha256": "480ab0dcc6cea70cab8ba00bff4a444a49cf54600f3acdc8d441de11c2cb4229",
+    "template": "项目报告模版.docx",
+    "template_sha256": "6afd2f1b5fb6c1843a4d8f6909a04519b23fa47ee8314f8e38c6d0e06a617711",
+    "template_preserved": true,
+    "unchanged_package_parts_verified": true,
+    "pages": 10,
+    "visually_reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "toc_pages_verified": true,
+    "filled": "User-provided cover identity, abstract and chapters 1 through 7",
+    "blank": "Chapter 8 contribution table and chapter 9 appendix",
+    "renderer": "Microsoft Word ExportAsFixedFormat and bundled pypdfium2",
+    "run_id": "course-20261016",
+    "data_source": "Current corpus and saved predictions, read-only aggregation; no fitting or new test inference",
+    "cover_review_passed": true,
+    "unchanged_reviewed_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "division_audit": {
+    "modules": 22,
+    "unique_files": 139,
+    "duplicates": [],
+    "missing_on_disk": [],
+    "sha256": "a054d519a4cb45b3f18606d2003dadf5c0c5e96e6e11d76edcbd0a2c29530008"
+  },
+  "maintenance_source_check": {
+    "unchanged": true,
+    "files_checked": 106,
+    "scope": "src/spam_analysis, app, configs, scripts, tests"
+  }
+}

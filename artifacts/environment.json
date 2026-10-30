@@ -1,0 +1,25 @@
+{
+  "python": "3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "logical_cpus": 16,
+  "ram_total_bytes": 68276973568,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "jieba": "0.42.1",
+    "datasketch": "2.0.0",
+    "pyarrow": "25.0.1",
+    "matplotlib": "3.10.9",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.57.1",
+    "huggingface-hub": "0.36.2",
+    "streamlit": "1.65.0",
+    "pytest": "9.1.1"
+  },
+  "cuda_compiled": "12.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU"
+}

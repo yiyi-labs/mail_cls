@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "utc": "2026-10-16T08:18:37.018622+08:00",
+  "run_id": "course-20261016",
+  "url": "http://127.0.0.1:8601/",
+  "plan_sha256": "bfc28ef70ba38350d1ff884f81e7a28964bac040f056a3f7238ea662b6c1d44f",
+  "checks": [
+    "Current five-model comparison and retrospective scope match saved results",
+    "Unified corpus 113715, Train 60497, source and script charts, error grouping and reliability",
+    "MacBERT single-mail inference with actual WordPiece IDs and token replay",
+    "Actual captured tensor replay advanced from frame 1 to 17 and paused at 26 of 37",
+    "CSV file picker uploaded examples/batch_demo.csv and completed 2/2 classifications",
+    "What-if changed score 0.179012936 to 0.999288421; restore returned original text",
+    "Same-message NB/LR/SVM/MacBERT comparison completed and flagged disagreement",
+    "Desktop and narrow viewport inspected; temporary viewport reset"
+  ],
+  "console_errors": [],
+  "known_limitation": {
+    "subject": "课程项目答疑时间",
+    "body": "同学们好，本周四下午安排项目答疑，请准备好代码与问题。",
+    "expected": "正常",
+    "predicted": "垃圾",
+    "score_spam": 0.998298381,
+    "threshold": 0.203657749,
+    "note": "Synthetic external demo, excluded from training and reported evaluation; no tuning from this observation"
+  },
+  "screenshots": {
+    "browser-comparison.png": "b2d7c52547d9531b878fd28e3a7fafc2b126e00f910cf2f823b702a0f7289ea3",
+    "browser-computation.png": "637bc7e6ad7fbc39c57ad9b57f655d0b922c52898a940ac341dd2aa61e6054c2",
+    "browser-data.png": "0f547682e03c2f3de0849075a8498dbc1effc9916773a6fcf6b8e1fbbede9d70",
+    "browser-mobile.png": "4f8e996acf981470d09dec3635e03868f2f11209720ab7d740cb7698ea9afc69",
+    "browser-upload.png": "eac1ca24173c81e9aab526d6ae7103576d426514fb3ac4c4d6d850454535ad90"
+  },
+  "latest_review": {
+    "utc": "2026-10-16T01:19:20.5951827Z",
+    "fix": "Remove fixed Streamlit deployment header overlapping the project brand",
+    "desktop_css_width": 1600,
+    "narrow_css_width": 433,
+    "horizontal_page_overflow": false,
+    "header_display": "none",
+    "viewport_reset": true,
+    "current_single_mail_inference_checked": true,
+    "current_comparison_checked": true,
+    "synthetic_course_notice_score": 0.998281778,
+    "console_note": "Only prior server restart connection errors at 01:05 UTC; inspected page reconnected and completed inference."
+  }
+}

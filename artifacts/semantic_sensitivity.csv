@@ -1,0 +1,9 @@
+model,doc_id,part,removed_chars,before,after,delta,interpretation
+E1,data/000/000,0,120,0.9990706396224497,0.999330476821427,0.0002598371989772641,"Local deletion sensitivity, not causal attribution"
+E1,data/000/000,1,120,0.9990706396224497,0.9990706396224497,0.0,"Local deletion sensitivity, not causal attribution"
+E1,data/000/001,0,120,0.16949296508776598,0.6189186819150015,0.44942571682723553,"Local deletion sensitivity, not causal attribution"
+E1,data/000/001,1,120,0.16949296508776598,0.35322340829473675,0.18373044320697077,"Local deletion sensitivity, not causal attribution"
+E2,data/000/000,0,120,1.0,1.0,0.0,"Local deletion sensitivity, not causal attribution"
+E2,data/000/000,1,120,1.0,1.0,0.0,"Local deletion sensitivity, not causal attribution"
+E2,data/000/001,0,120,4.270570411587259e-06,4.270570411587259e-06,0.0,"Local deletion sensitivity, not causal attribution"
+E2,data/000/001,1,120,4.270570411587259e-06,1.0848058821246124e-05,6.577488409658865e-06,"Local deletion sensitivity, not causal attribution"

@@ -1,0 +1,25 @@
+{
+  "run_id": "course-20261015",
+  "seed": 42,
+  "gpu_limit_seconds": 28800,
+  "macbert_learning_rates": [
+    2e-05,
+    3e-05
+  ],
+  "loss_modes": [
+    "ordinary",
+    "balanced"
+  ],
+  "epochs": 3,
+  "calibration_C": [
+    1.0,
+    1000000.0
+  ],
+  "selection": "Tune accuracy, lower ham FPR, Macro-F1; Policy promotion guard per source",
+  "corpus_sha256": "11527528e83142c5d1f46680cceeec8e01bc69676adc6fd60f77da657932fd90",
+  "corpora": {
+    "trec06c": "babca15c32cc802dbc6644e5ac9b19f16aaf71b67314a97474ccba0577516c30",
+    "spamassassin": "55ad97535400789138c08727af3490f1257f7fe0606cfa2b16813800e81076ae",
+    "enron": "7f66f5c7523f2c940e919d83b163709fbe2d11637e482159ce15ab86a25739d0"
+  }
+}

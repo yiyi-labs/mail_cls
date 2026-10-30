@@ -1,0 +1,7 @@
+{
+  "best": "S_char13",
+  "criterion": "Tune macro_f1 then lower ham_fpr among converged candidates",
+  "configurations": 33,
+  "refit": false,
+  "reason_supplement": "Feature caps, subject weights, convergence repair and matched LR structural ablation"
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewer": "Codex visual inspection",
+  "files": {
+    "01_class_balance": "d2f92396f68f0522863b7c739d25393f86d50b508d87a5ae955fec7db7e2d85f",
+    "02_lengths": "4e79dfd3d878d95e1b5c4939f1b1a590113e61f7486838e20bb3d538db20fc98",
+    "03_groups": "c2872efe54ad384a16e8eabc8eeb9bb570a91f88b829ba951940b4b8faf6d7a7",
+    "04_keywords": "4353b1c80288fa45d5a36047b80b9218066031623b10ef76571e51b8b0c4e8df",
+    "05_quality": "88128826dd996db017c7250e4d5f4ae79374c3f785837d3ae1d35916d3110902",
+    "06_discriminative_terms": "3704c88111d11eaee6fc1aba814cb36819bb822dfb1c0474f0eb17c11646f638"
+  },
+  "scope": "All six Train figures inspected; Chinese text legible, axes and data subset labelled; keyword frequency and discriminative terms kept distinct"
+}

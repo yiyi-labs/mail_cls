@@ -1,0 +1,22 @@
+{
+  "tn": 0.0,
+  "fp": 2100.0,
+  "fn": 0.0,
+  "tp": 3833.0,
+  "accuracy": 0.6460475307601551,
+  "spam_precision": 0.6460475307601551,
+  "spam_recall": 1.0,
+  "spam_f1": 0.7849682572189228,
+  "ham_precision": 0.0,
+  "ham_recall": 0.0,
+  "ham_f1": 0.0,
+  "macro_f1": 0.3924841286094614,
+  "balanced_accuracy": 0.5,
+  "ham_fpr": 1.0,
+  "spam_miss_rate": 0.0,
+  "n": 5933,
+  "threshold": 0.5,
+  "average_precision": 0.6460475307601551,
+  "roc_auc": 0.5,
+  "brier": 0.22921395253936788
+}

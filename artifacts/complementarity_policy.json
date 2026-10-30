@@ -1,0 +1,10 @@
+{
+  "sparse": "S_char13",
+  "semantic": "E2",
+  "n": 6239,
+  "semantic_repairs": 30,
+  "semantic_new_errors": 0,
+  "both_wrong": 0,
+  "both_right": 6209,
+  "threshold": 0.5
+}

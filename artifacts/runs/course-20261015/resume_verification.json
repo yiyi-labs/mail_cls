@@ -1,0 +1,31 @@
+{
+  "before": {
+    "sequence": 2,
+    "loss_mode": "ordinary",
+    "lr": 2e-05,
+    "epoch": 1,
+    "phase": "train",
+    "processed": 6752,
+    "total": 60497,
+    "saved_at": "2026-10-15T20:25:40"
+  },
+  "resume_log": {
+    "loss_mode": "ordinary",
+    "learning_rate": 2e-05,
+    "epoch": 1,
+    "next_batch": 844,
+    "batch_size": 8
+  },
+  "after": {
+    "sequence": 3,
+    "loss_mode": "ordinary",
+    "lr": 2e-05,
+    "epoch": 1,
+    "phase": "train",
+    "processed": 9616,
+    "total": 60497,
+    "saved_at": "2026-10-15T20:29:06"
+  },
+  "verified_processed_at_resume": true,
+  "test_opened": false
+}

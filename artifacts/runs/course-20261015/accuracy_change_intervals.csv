@@ -1,0 +1,16 @@
+scope,model,difference,low,high,groups,repeats
+trec06c,B1,0.0,0.0,0.0,3823,1000
+trec06c,B2,0.0,0.0,0.0,3823,1000
+trec06c,S_char13,0.0,0.0,0.0,3823,1000
+trec06c,E1,0.0,0.0,0.0,3823,1000
+trec06c,E2,0.0,0.0,0.0,3823,1000
+spamassassin,B1,0.0,0.0,0.0,1079,1000
+spamassassin,B2,0.0,0.0,0.0,1079,1000
+spamassassin,S_char13,0.0,0.0,0.0,1079,1000
+spamassassin,E1,0.0,0.0,0.0,1079,1000
+spamassassin,E2,0.0,0.0,0.0,1079,1000
+enron,B1,0.0,0.0,0.0,7456,1000
+enron,B2,0.0,0.0,0.0,7456,1000
+enron,S_char13,0.0,0.0,0.0,7456,1000
+enron,E1,0.0,0.0,0.0,7456,1000
+enron,E2,0.0,0.0,0.0,7456,1000

@@ -1,0 +1,14 @@
+{
+  "rows": 36158,
+  "subject_truncated_fraction": 0.0011615686708335638,
+  "body_truncated_fraction": 0.2720836329443,
+  "any_truncated_fraction": 0.2728856684551137,
+  "original_total_token_quantiles": {
+    "0.5": 311.0,
+    "0.9": 1517.0,
+    "0.95": 2524.0,
+    "0.99": 5096.43
+  },
+  "max_encoded_tokens": 512,
+  "scope": "Train; subject/body truncation evaluated against actual per-mail token budget"
+}

@@ -1,0 +1,9 @@
+{
+  "device": "cuda",
+  "n": 3,
+  "elapsed_s": 15.775836599990726,
+  "load_s": 1.2707629000069574,
+  "max_length": 1024,
+  "batch_size": 1,
+  "note": "Three fixed Train rows; too small to claim corpus throughput"
+}

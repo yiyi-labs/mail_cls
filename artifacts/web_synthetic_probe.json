@@ -1,0 +1,35 @@
+{
+  "scope": "one synthetic course notice; author-intended ham; not a formal accuracy estimate",
+  "subject": "课程项目答疑时间",
+  "body": "同学们好,本周四下午安排项目答疑,请准备好代码与问题。",
+  "results": [
+    {
+      "model": "B2",
+      "score": 0.6262281041692697,
+      "threshold": 0.8161531266282536,
+      "prediction": 0,
+      "trace_matches_original": true
+    },
+    {
+      "model": "S_char13",
+      "score": 0.9922223443083742,
+      "threshold": 0.08215687597473362,
+      "prediction": 1,
+      "trace_matches_original": true
+    },
+    {
+      "model": "E1",
+      "score": 0.0015736362916671136,
+      "threshold": 0.7687048317946086,
+      "prediction": 0,
+      "trace_matches_original": true
+    },
+    {
+      "model": "E2",
+      "score": 1.0,
+      "threshold": 0.9994168334001157,
+      "prediction": 1,
+      "trace_matches_original": true
+    }
+  ]
+}

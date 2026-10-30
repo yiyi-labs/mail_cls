@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "Real sparse inference and contributions",
+    "Local edit, same-model recomputation and restore",
+    "Same-message comparison",
+    "Input invalidation and empty-input prior",
+    "Unified catalog, independent split filter and empty search",
+    "Version-matched model comparison and unified data analysis",
+    "Source, script, length and quality slices",
+    "Both neural model inference traces",
+    "Read-only data and evidence identities"
+  ],
+  "plan_sha256": "bfc28ef70ba38350d1ff884f81e7a28964bac040f056a3f7238ea662b6c1d44f",
+  "run_id": "course-20261016"
+}

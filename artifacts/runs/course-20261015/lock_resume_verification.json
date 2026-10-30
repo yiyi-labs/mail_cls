@@ -1,0 +1,25 @@
+{
+  "before": {
+    "sequence": 32,
+    "loss_mode": "ordinary",
+    "lr": 2e-05,
+    "epoch": 2,
+    "phase": "train",
+    "processed": 46832,
+    "total": 60497,
+    "saved_at": "2026-10-15T20:58:04"
+  },
+  "after": {
+    "sequence": 35,
+    "loss_mode": "ordinary",
+    "lr": 2e-05,
+    "epoch": 2,
+    "phase": "train",
+    "processed": 57264,
+    "total": 60497,
+    "saved_at": "2026-10-15T21:02:56"
+  },
+  "resumed_batch": 5854,
+  "resumed_rows": 46832,
+  "duplicate_writer_rejected": true
+}

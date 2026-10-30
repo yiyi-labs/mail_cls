@@ -1,0 +1,52 @@
+[
+  {
+    "family": "B1",
+    "converged": true,
+    "n_iter": null
+  },
+  {
+    "family": "B2",
+    "converged": true,
+    "n_iter": 8
+  },
+  {
+    "family": "body_word",
+    "converged": true,
+    "n_iter": 26
+  },
+  {
+    "family": "char",
+    "converged": true,
+    "n_iter": 26
+  },
+  {
+    "family": "word_char",
+    "converged": true,
+    "n_iter": 90
+  },
+  {
+    "family": "S",
+    "converged": true,
+    "n_iter": 63
+  },
+  {
+    "family": "S_structure",
+    "converged": false,
+    "n_iter": 5000
+  },
+  {
+    "family": "S_char13",
+    "converged": true,
+    "n_iter": 65
+  },
+  {
+    "family": "naive",
+    "converged": true,
+    "n_iter": 8
+  },
+  {
+    "family": "N",
+    "converged": true,
+    "n_iter": 4130
+  }
+]

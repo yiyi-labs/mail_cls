@@ -1,0 +1,323 @@
+{
+  "config.json": {
+    "run_id": "course-20261015",
+    "seed": 42,
+    "gpu_limit_seconds": 28800,
+    "macbert_learning_rates": [
+      2e-05,
+      3e-05
+    ],
+    "loss_modes": [
+      "ordinary",
+      "balanced"
+    ],
+    "epochs": 3,
+    "calibration_C": [
+      1.0,
+      1000000.0
+    ],
+    "selection": "Tune accuracy, lower ham FPR, Macro-F1; Policy promotion guard per source",
+    "corpora": {
+      "trec06c": "babca15c32cc802dbc6644e5ac9b19f16aaf71b67314a97474ccba0577516c30",
+      "spamassassin": "55ad97535400789138c08727af3490f1257f7fe0606cfa2b16813800e81076ae"
+    }
+  },
+  "neural_progress.json": [
+    {
+      "loss_mode": "ordinary",
+      "lr": 2e-05,
+      "epoch": 1,
+      "training_loss": 0.06134851617874447,
+      "training_s": 967.1283827999978,
+      "peak_allocated_mib": 3490.724609375,
+      "train_rows": 39091,
+      "tn": 2512.0,
+      "fp": 1.0,
+      "fn": 37.0,
+      "tp": 3970.0,
+      "accuracy": 0.9941717791411043,
+      "spam_precision": 0.9997481742634097,
+      "spam_recall": 0.9907661592213626,
+      "spam_f1": 0.9952369014790674,
+      "ham_precision": 0.9854845037269517,
+      "ham_recall": 0.9996020692399522,
+      "ham_f1": 0.9924930857368629,
+      "macro_f1": 0.9938649936079651,
+      "balanced_accuracy": 0.9951841142306574,
+      "ham_fpr": 0.0003979307600477517,
+      "spam_miss_rate": 0.009233840778637384,
+      "n": 6520,
+      "threshold": 0.0,
+      "average_precision": 0.999920023628147,
+      "roc_auc": 0.9998752183678562,
+      "brier": null
+    }
+  ],
+  "candidates.json": {
+    "B1": {
+      "candidate": "B1_mixed_sources",
+      "path": "artifacts\\runs\\course-20261015\\models\\B1.joblib",
+      "metrics": {
+        "tn": 2464.0,
+        "fp": 49.0,
+        "fn": 240.0,
+        "tp": 3767.0,
+        "accuracy": 0.9556748466257668,
+        "spam_precision": 0.9871593291404612,
+        "spam_recall": 0.9401048165710008,
+        "spam_f1": 0.9630576505177042,
+        "ham_precision": 0.9112426035502958,
+        "ham_recall": 0.9805013927576601,
+        "ham_f1": 0.9446041786467319,
+        "macro_f1": 0.953830914582218,
+        "balanced_accuracy": 0.9603031046643304,
+        "ham_fpr": 0.019498607242339833,
+        "spam_miss_rate": 0.05989518342899925,
+        "n": 6520,
+        "threshold": 0.0,
+        "average_precision": 0.9954411889454747,
+        "roc_auc": 0.9922744627860257,
+        "brier": null
+      },
+      "kind": "nb",
+      "param": 0.1,
+      "balanced": false,
+      "feature_kwargs": {
+        "baseline": true
+      },
+      "cap_audit": {
+        "word": {
+          "dimensions": 100000,
+          "eligible": 790472,
+          "cap": 100000,
+          "truncated_fraction": 0.8734933052657147,
+          "hit_cap": true
+        }
+      },
+      "fit_split": "train",
+      "calibrated": false,
+      "converged": true,
+      "type": "sparse",
+      "calibrator_path": "artifacts/models/B1_calibrator.joblib",
+      "calibration_split": "calibrate",
+      "model_sha256": "b8eb00c60c0f3fdb99739566059a9502ddae5dbeb37ebc304d1d2ecbf3d65c6f",
+      "calibrator_sha256": "03a7e04d039643b664ffe2cb48b57f4f2a884d60f5a97df67400ca762f842cac",
+      "train_prior": 0.6415287406308358,
+      "fit_s": 138.77365009999994,
+      "train_rows": 39091
+    },
+    "B2": {
+      "candidate": "B2_mixed_sources",
+      "path": "artifacts\\runs\\course-20261015\\models\\B2.joblib",
+      "metrics": {
+        "tn": 2489.0,
+        "fp": 24.0,
+        "fn": 13.0,
+        "tp": 3994.0,
+        "accuracy": 0.9943251533742331,
+        "spam_precision": 0.9940268790443006,
+        "spam_recall": 0.9967556775642625,
+        "spam_f1": 0.9953894080996885,
+        "ham_precision": 0.9948041566746603,
+        "ham_recall": 0.990449661758854,
+        "ham_f1": 0.9926221335992024,
+        "macro_f1": 0.9940057708494454,
+        "balanced_accuracy": 0.9936026696615583,
+        "ham_fpr": 0.00955033824114604,
+        "spam_miss_rate": 0.0032443224357374596,
+        "n": 6520,
+        "threshold": 0.0,
+        "average_precision": 0.9997146807305131,
+        "roc_auc": 0.9995102085079722,
+        "brier": null
+      },
+      "kind": "lr",
+      "param": 4,
+      "balanced": false,
+      "feature_kwargs": {
+        "baseline": true
+      },
+      "cap_audit": {
+        "word": {
+          "dimensions": 100000,
+          "eligible": 790472,
+          "cap": 100000,
+          "truncated_fraction": 0.8734933052657147,
+          "hit_cap": true
+        }
+      },
+      "fit_split": "train",
+      "calibrated": false,
+      "converged": true,
+      "type": "sparse",
+      "calibrator_path": "artifacts/models/B2_calibrator.joblib",
+      "calibration_split": "calibrate",
+      "model_sha256": "90773d5186c4d8b01f7b4356d4697c049a1802b1fd419412f49a6881335dfcc0",
+      "calibrator_sha256": "fde847d9dede91d2fd1304934ab0c354687ef0c5788ea1b76733bc95e1ca6a68",
+      "train_prior": 0.6415287406308358,
+      "fit_s": 81.95448089999991,
+      "train_rows": 39091
+    },
+    "S_char13": {
+      "candidate": "S_char13_mixed_sources",
+      "path": "artifacts\\runs\\course-20261015\\models\\S_char13.joblib",
+      "metrics": {
+        "tn": 2512.0,
+        "fp": 1.0,
+        "fn": 7.0,
+        "tp": 4000.0,
+        "accuracy": 0.9987730061349693,
+        "spam_precision": 0.9997500624843789,
+        "spam_recall": 0.9982530571499876,
+        "spam_f1": 0.999000999000999,
+        "ham_precision": 0.9972211194918619,
+        "ham_recall": 0.9996020692399522,
+        "ham_f1": 0.9984101748807631,
+        "macro_f1": 0.9987055869408811,
+        "balanced_accuracy": 0.9989275631949699,
+        "ham_fpr": 0.0003979307600477517,
+        "spam_miss_rate": 0.0017469428500124782,
+        "n": 6520,
+        "threshold": 0.0,
+        "average_precision": 0.9998807782353778,
+        "roc_auc": 0.9997148841497137,
+        "brier": null
+      },
+      "kind": "svm",
+      "param": 1,
+      "balanced": false,
+      "feature_kwargs": {
+        "char": true,
+        "subject": true,
+        "char_range": [
+          1,
+          3
+        ]
+      },
+      "cap_audit": {
+        "word": {
+          "dimensions": 100000,
+          "eligible": 778258,
+          "cap": 100000,
+          "truncated_fraction": 0.8715079061185365,
+          "hit_cap": true
+        },
+        "char": {
+          "dimensions": 200000,
+          "eligible": 1608229,
+          "cap": 200000,
+          "truncated_fraction": 0.8756396010767123,
+          "hit_cap": true
+        },
+        "subject": {
+          "dimensions": 30000,
+          "eligible": 32384,
+          "cap": 30000,
+          "truncated_fraction": 0.0736166007905138,
+          "hit_cap": true
+        }
+      },
+      "fit_split": "train",
+      "calibrated": false,
+      "converged": true,
+      "type": "sparse",
+      "calibrator_path": "artifacts/models/S_char13_calibrator.joblib",
+      "calibration_split": "calibrate",
+      "model_sha256": "b9b34e2b88b23295eaf6472c8743eb414e867053c3fc952333841dfc12bcbfa9",
+      "calibrator_sha256": "a9a79a595e2778b9c7a36a647cf8b6545ae1badb17c49ee2a3787c07868f18f3",
+      "train_prior": 0.6415287406308358,
+      "fit_s": 375.814878600002,
+      "train_rows": 39091
+    },
+    "E2": {
+      "path": "artifacts\\runs\\course-20261015\\models\\E2_identity.json",
+      "identity": {
+        "repo": "hfl/chinese-macbert-base",
+        "revision": "a986e004d2a7f2a1c2f5a3edef4e20604a974ed1",
+        "license": "apache-2.0",
+        "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\.cache\\huggingface\\hub\\models--hfl--chinese-macbert-base\\snapshots\\a986e004d2a7f2a1c2f5a3edef4e20604a974ed1",
+        "files": {
+          "added_tokens.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "config.json": "648c8a2b51c12551f94bae19a66c21a59c9bd8aa0ebb99f2a0af7236cdb99daa",
+          "pytorch_model.bin": "db0506d985574b80c33eec1cf13bd4c130585568753175871095ca13dbad9e23",
+          "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+          "tokenizer.json": "53ff61207898738bbdc000f38abebef01041c8d23b6270c11855fc692d0a3ad6",
+          "tokenizer_config.json": "61785aeaba176fba6d6489f27dccfd2ddee6aee2af0e590451cab7d8b57e0874",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      },
+      "checkpoint": {
+        "folder": "D:\\STUDY\\College\\Curriculum\\2a\\pythondata\\mail_cls\\artifacts\\runs\\course-20261015\\models\\E2_checkpoint",
+        "files": {
+          "config.json": "b769e9dc7fe5bb3bae6ede53894a505dda89560d8fce65c79ce1673cb822f91e",
+          "model.safetensors": "1ddad7538e013ba22c58f83f6b9cdcd2a085b7511fb6e5962e7b30e022b5d6d5",
+          "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+          "tokenizer.json": "7dfbf1966ebf99d471c3796e9b457329d2b2182b817e144f1e904b957745c839",
+          "tokenizer_config.json": "75a743f7397bf8e240ac050a98e85084af163f8d2cc175448e793897e2f67225",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        },
+        "lr": 2e-05,
+        "epoch": 1,
+        "mode": "head_tail",
+        "loss_mode": "ordinary"
+      },
+      "config": {
+        "qwen_repo": "Qwen/Qwen3-Embedding-0.6B",
+        "macbert_repo": "hfl/chinese-macbert-base",
+        "max_length": 1024,
+        "embedding_batch_size": 8,
+        "instruction": "",
+        "embedding_truncation": "head",
+        "pooling": "last_nonpadding_token_l2",
+        "lr_candidates": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "macbert_max_length": 512,
+        "macbert_subject_max": 64,
+        "macbert_batch_size": 8,
+        "macbert_accumulation": 2,
+        "macbert_epochs": 3,
+        "macbert_learning_rates": [
+          2e-05,
+          3e-05
+        ],
+        "macbert_truncation": "head_tail",
+        "seed": 42
+      },
+      "metrics": {
+        "tn": 2512.0,
+        "fp": 1.0,
+        "fn": 37.0,
+        "tp": 3970.0,
+        "accuracy": 0.9941717791411043,
+        "spam_precision": 0.9997481742634097,
+        "spam_recall": 0.9907661592213626,
+        "spam_f1": 0.9952369014790674,
+        "ham_precision": 0.9854845037269517,
+        "ham_recall": 0.9996020692399522,
+        "ham_f1": 0.9924930857368629,
+        "macro_f1": 0.9938649936079651,
+        "balanced_accuracy": 0.9951841142306574,
+        "ham_fpr": 0.0003979307600477517,
+        "spam_miss_rate": 0.009233840778637384,
+        "n": 6520,
+        "threshold": 0.0,
+        "average_precision": 0.999920023628147,
+        "roc_auc": 0.9998752183678562,
+        "brier": null
+      },
+      "fit_split": "train",
+      "type": "semantic",
+      "calibrator_path": "artifacts/models/E2_calibrator.joblib",
+      "calibration_split": "calibrate",
+      "model_sha256": "8fdbfb232d28a473ac9147ada9f761fc4e2e54bee61bb5a1765e95300f6dc8ec",
+      "calibrator_sha256": "1af98a5c00c683b22a9518d8e50dd342ce598f1df819708db8218cccd8d3fbfc",
+      "train_prior": 0.6415287406308358,
+      "train_rows": 39091,
+      "candidate": "E2_ordinary_2e-05_1"
+    }
+  },
+  "reason": "User requested further reliable corpus expansion before evaluation; unpublished candidates retired."
+}
